@@ -64,3 +64,6 @@ Route::get('/producto/{id}', function ($id) {
     $vac = compact("id");
     return view ("producto", $vac);
 });
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
