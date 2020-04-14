@@ -35,9 +35,7 @@ Route::get('/index', function () {
     return view ("carrito");
  });
 
- Route::get('/login', function () {
-    return view ("login");
- });
+
 
  Route::get('/miperfil', function () {
    return view ("miperfil");
@@ -59,24 +57,27 @@ Route::post('/registracion', function () {
 });
 
 
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/productos', function () {
+   return view ("listadodeproductos");
+});
+
 // este codigo sirve para cada producto individual pero le falta algo 
 Route::get('/producto/{id}', function ($id) {
-    $vac = compact("id");
-    return view ("producto", $vac);
+   $vac = compact("id");
+   return view ("producto", $vac);
 });
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
-
-
-
-
-
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');

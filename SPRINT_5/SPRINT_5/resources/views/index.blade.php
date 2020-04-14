@@ -1,38 +1,4 @@
-<?php
-session_start();
-if (isset($_SESSION['usuario'])) {
-    $usuario = $_SESSION['usuario'];
-} else {
-    header('Location');
-}
 
-$errores = [];
-
-if(count($errores) == 0){
-    if($_POST){
-        if($_POST['salir'] == 'Salir'){
-            session_destroy();
-            setcookie('usuario','',-1);
-            header('Location: login.php');
-        }else if(($_POST['guardar'] == 'Guardar Cambios')){
-            
-            $db = file_get_contents("usuario.json");
-            $usuario = json_decode($db, true);
-            
-            $usuario['nombre'] = $_POST["name"];
-            $usuario['apellido'] = $_POST["surname"];
-            $usuario['password'] = $hash = password_hash($_POST["password"], PASSWORD_DEFAULT); 
-            $db = json_encode ($usuario);
-            
-            file_put_contents("usuario.json", $db);
-        }
-    }
-    
-}
-
-
-
-?>
 <!DOCTYPE html>
 <html>
 <head>
