@@ -451,3 +451,13 @@ font-weight: bold;
    font-size: 20px;
    margin-top: 12px;
 }
+/* ADMINISTRADOR */
+.administrador h1{
+    text-align: center;
+}
+.administrador p{
+    text-align: center;
+}
+.administrador{
+    background-color:#9c9c9c9c;
+}

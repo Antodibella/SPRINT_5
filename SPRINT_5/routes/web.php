@@ -57,6 +57,9 @@ Route::get('/productos/{id}', "productoscontroller@detalle");
 Route::post('/registracion', function () {
     return "Bienvenido";
 });
+Route::get('/administrador', function () {
+   return view("administrador");
+});
 
 
 // este codigo sirve para cada producto individual pero le falta algo 
