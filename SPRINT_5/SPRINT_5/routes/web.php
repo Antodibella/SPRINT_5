@@ -62,15 +62,8 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Auth::routes();
+Route::get('/', 'HomeController@index')->name('inicio');
 
-Route::get('/home', 'HomeController@index')->name('home');
-
-
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/productos', function () {
    return view ("listadodeproductos");
