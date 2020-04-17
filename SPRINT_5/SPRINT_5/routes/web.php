@@ -35,7 +35,9 @@ Route::get('/index', function () {
     return view ("carrito");
  });
 
-
+ Route::get('/administrador', function () {
+   return view ("administrador");
+});
 
  Route::get('/miperfil', function () {
    return view ("miperfil");
