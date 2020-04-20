@@ -60,7 +60,7 @@ Route::post('/registracion', function () {
 Route::get('/administrador', function () {
    return view("administrador");
 });
-
+Route::post('/administrador', 'agregarProductosController@producto');
 
 // este codigo sirve para cada producto individual pero le falta algo 
 Route::get('/producto/{id}', function ($id) {

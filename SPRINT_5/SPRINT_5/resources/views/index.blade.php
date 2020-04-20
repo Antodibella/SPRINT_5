@@ -1,4 +1,4 @@
-
+@include('header')
 <!DOCTYPE html>
 <html>
 <head>
@@ -13,49 +13,7 @@
 <body>
 
 
-<!--  BARRA DE INICIO -->
-<header>
 
-<nav class="navbar navbar-expand-lg navbar-light ">
-<a href="index"><img src="img/LOGO.png" alt="logotipo" class="logo"></a>
-<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-<span class="navbar-toggler-icon"></span>
-</button>
-<div class="barradeinicio">
-<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-<div class="navbar-nav ml-auto">
-<ul class="navbar-nav ml-auto mt-2 mt-lg-0">
-<li class="nav-item active">
-<a class="nav-link" href="index">INICIO <span class="sr-only">(current)</span></a>
-</li>
-<li class="nav-item active">
-<a class="nav-link" href="productos">PRODUCTOS <span class="sr-only">(current)</span></a>
-</li>
-<li class="nav-item">
-<a class="nav-link" href="ayuda" tabindex="-1" aria-disabled="true">AYUDA</a>
-</li>
-<li>
-<a class="fas fa-shopping-cart black"  href= "carrito" ></a>
-</li>
-<li class="nav-item">
-<a class="nav-link" href="login" tabindex="-1" aria-disabled="true"><img src="img/usuario.png" alt="" width="25px"></a>
-</li>
-<li class="nav-item dropdown">
-<a class="nav-link dropdown-toggle" data-toggle="dropdown"  role="button" aria-haspopup="true" aria-expanded="false"></strong><?= isset($usuario['nombre']) ? $usuario['nombre'] : '' ?></a>
-<div class="dropdown-menu">
-<a class="dropdown-item"  href="miperfil">Mi Perfil</a>
-</a><form action="index" method="post"> <input type='submit' a class="dropdown-item" name='salir' value='Salir' />
-</form>
-</div>
-</ul>       
-</div>
-</div>
-</nav>
-</div>
-</header>
-<!-- para hacer el commit -->
-<div>
-</div>
 <!--  Banner  -->
 <section>
 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
@@ -111,30 +69,7 @@
 </div>
 </div>
 </section>
- <!--  BARRA DE PIE DE PAGINA  -->
- <footer>
-<nav class="navbar navbar-expand-lg navbar-light ">
-<a href="index"><img src="img/LOGO.png" alt="logotipo" class="logo"></a>
-<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-<span class="navbar-toggler-icon"></span>
-</button>
-<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-<div class="navbar-nav m-auto">
-<a class="nav-item nav-link active" href="quienessomos">QuienesSomos<span class="sr-only">(current)</span></a>
-<a class="nav-item nav-link active" href="Registrarse">Registrarse <span class="sr-only">(current)</span></a>
-<a class="nav-item nav-link active" href="ayuda">Ayuda<span class="sr-only">(current)</span></a>
-<!--     <i class="fab fa-twitter"></i>
-<i class="fab fa-facebook-f"></i>
--->
-</div>
-</div>
-</nav>
-
-
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-
-</footer>
-        </body>
-        </html>
+ 
+</body>
+</html>
+@include('footer')
