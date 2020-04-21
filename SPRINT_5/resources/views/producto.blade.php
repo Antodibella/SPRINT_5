@@ -1,5 +1,12 @@
+<?php
+session_start();
+if (isset($_SESSION['usuario'])) {
+    $usuario = $_SESSION['usuario'];
+} else {
+    header('Location');
+}
+?>
 @include('header')
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,7 +19,7 @@
     <title>Iphone 8 - Tecno Movil</title>
 </head>
 <body class="producto">
-  
+   
 <!-- Descripcion del procucto -->
 <section>
     <div class="products">
@@ -55,7 +62,8 @@
 
        
 </section>
-  
+
+
         </body>
         </html>
         @include('footer')
