@@ -1,4 +1,5 @@
 
+@include('header')
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -24,7 +25,7 @@
    
    
    
-  <!-- AGREGAR PRODUCTO -->
+  {{-- AGREGAR PRODUCTO --}}
   <div class="modal fade bd-example-modal-xl" tabindex="-1" role="dialog" aria-labelledby="myExtraLargeModalLabel" aria-hidden="true" id="agregar">
    
            <div class="modal-dialog modal-xl">
@@ -34,7 +35,18 @@
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
-      
+                <h1>AGREGAR PRODUCTOS</h1>
+         {{--  <ul>
+       @foreach ($errores as $error) 
+        <li>
+            {{error}}
+        </li> 
+        @endforeach
+    </ul>
+  
+        
+    @endforeach
+      --}}
           <form method="POST" action="/administrador" enctype="multipart/form-data">
        
               <p>Por favor complete todo los campos</p>
@@ -110,7 +122,7 @@
 </div>
 </div>
 
- <!--  BORRAR PRODUCTOS  -->
+{{--   BORRAR PRODUCTOS --}} 
 <div class="modal fade bd-example-modal-xl" tabindex="-1" role="dialog" aria-labelledby="myExtraLargeModalLabel" aria-hidden="true" id="borrar">
    
     <div class="modal-dialog modal-xl">
@@ -137,3 +149,4 @@
   </div>
 </body>
 </html>
+@include('footer')

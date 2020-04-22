@@ -38,6 +38,7 @@ Route::get('/index', function () {
  Route::get('/administrador', function () {
    return view ("administrador");
 });
+Route::get('/administrador/{id}', "agregarProductosController@detalle");
 
  Route::get('/miperfil', function () {
    return view ("miperfil");
