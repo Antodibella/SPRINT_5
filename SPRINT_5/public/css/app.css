@@ -9108,3 +9108,14 @@ a.text-dark:focus {
   }
 }
 
+/* BARRAS */
+.navbar {
+  background-color: darkgrey !important;
+}
+
+.logo {
+  width: 10%;
+  margin-right: 30px;
+  display: block;
+  
+}

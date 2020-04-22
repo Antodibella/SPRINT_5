@@ -1,4 +1,5 @@
-@include('header')
+
+
 
 @extends('layouts.app')
 
@@ -74,4 +75,3 @@
 </div>
 
 @endsection
-@include('footer')

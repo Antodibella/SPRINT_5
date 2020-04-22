@@ -135,7 +135,6 @@
 
           <form method="POST" action="administrador" enctype="multipart/form-data">
             
-             
               <p>Por favor complete todo los campos</p>
               
               <button type="submit" name="submit" class="boton1">BORRAR</button>
