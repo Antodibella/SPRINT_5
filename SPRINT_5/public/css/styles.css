@@ -461,3 +461,8 @@ font-weight: bold;
 .administrador{
     background-color:#9c9c9c9c;
 }
+.administrador .btn-group{
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+}

@@ -20,7 +20,7 @@
         <button type="button" class="btn btn-secondary"  data-toggle="modal" data-target="#borrar">Borrar Productos</button>
       </div>
     <br><br><br>
-   <img class="localadmin" src="/img/local.jpg" alt="">
+   <img class="localadmin" src="/img/local.jpg" alt="" width="100%">
    
    
    
@@ -46,8 +46,7 @@
         
     @endforeach
       --}}
-          <form method="POST" action="/administrador" enctype="multipart/form-data">
-       
+                 
               <p>Por favor complete todo los campos</p>
               <form class="agregarProducto" action="" method="post" enctype="multipart/form-data">  
                 <input type="hidden" name="submitted" id="submitted" value="1">
@@ -90,7 +89,7 @@
               
         
               <br><br>
-          </form>
+          
         </div>
       </div>
     </div>

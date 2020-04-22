@@ -3,9 +3,9 @@ public function producto(Request $req){
     $reglas=[
         "marca"=> "required | string | min:2",
         "modelo"=> "required | string | min:2",
-        "caracteristicas"=> "required | string | required|max:255",
+        "caracteristicas"=> "required | string |max:255",
         "precio"=> "required | numeric ",
-        "stock"=> "required | integer | required|max:255"
+        "stock"=> "required | integer "
         
 
         ];
@@ -18,13 +18,13 @@ public function producto(Request $req){
         "max"=> " El campo :attribute tiene un maximo de :max"
         ];
     this->validate($req, $reglas, $mensajes);
-   /*  productoNuevo -> marca = $req["marca"];
+    productoNuevo -> marca = $req["marca"];
        productoNuevo -> modelo = $req["modelo"];
        productoNuevo -> caracteriscas = $req["caracteristicas"];
        productoNuevo -> precio = $req["precio"];
        productoNuevo -> stock = $req["stock"];
     
     productoNuevo -> save();
-    return redirect("/administrador"); */
+    return redirect("/administrador"); 
 };
 ?>
