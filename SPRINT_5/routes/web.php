@@ -47,9 +47,9 @@ Route::get('/quienessomos', function () {
    return view ("quienessomos");
 });
 
-Route::get('/productos', "productoscontroller@lsitado" );
+//Route::get('/productos', "productoscontroller@lsitado" );
 
-Route::get('/productos/{id}', "productoscontroller@detalle");
+//Route::get('/productos/{id}', "productoscontroller@detalle");
 
  Route::get('/registrarse', function () {
     return "Registrarse";
