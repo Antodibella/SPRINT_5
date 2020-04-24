@@ -17,7 +17,25 @@
     <br><br>
     <div  class="row">
         
-        
+      <section>
+        <br><br>
+        <div  class="row">
+            <?php foreach($productos as $producto) : ?>
+            
+                <div class="col-md-4 col-lg-3">
+                    <a href="producto?id=<?=$producto['id']?>"><img src="{{-- mostrar imagen db --}}" alt="logotipo" class="img-fluid" width="300px"></a> 
+                    <a href="producto?id=<?=$producto['id']?>"><h2><?=$producto['modelo']?></h2></a>
+                    <p>ARS <?=$productos['precio']?></p>
+                
+                </div>
+            <?php endforeach; ?>
+           
+            
+        </div>
+    
+        </div> 
+    </section>
+
         <div class="col-md-5 col-lg-4">
             <a href="producto1.php"><img src="img/iphone-8-03.png" alt="logotipo" class="img-fluid" width="300px"></a> 
             <a href="producto1.php"><h2>Iphone 8</h2></a>
@@ -32,7 +50,7 @@
             <p>ARS $8.500</p>
             <br>
         </div>
-        <div class="col-md-5 col-lg-4">
+        {{-- <div class="col-md-5 col-lg-4">
             <a href="producto2.php"><img src="img/apple-iphone-x--1.jpg" alt="logotipo" class="img-fluid" width="300px"></a>
             <br>
             <a href="producto2.php"><h2>Iphone X 256 gb</h2></a>
@@ -46,21 +64,9 @@
             <a href="producto8.php"><h2>Motorola G6</h2></a>
             <p>ARS $16.000</p>
             <br>
-        </div>
-        <div class="col-md-5 col-lg-4">
-            <a href="producto3.php"><img src="img/apple-iphone-11-pro-1.jpg" alt="logotipo" class="img-fluid" width="300px"></a>
-            <a href="producto3.php"><h2>Iphone 11 PRO</h2></a>
-            <p>ARS $125.000</p>
-            <br>
-            <a href="producto6.php"><img src="img/samsung-galaxy-S10plus.jpg" alt="logotipo" class="img-fluid" width="300px"></a>
-            <a href="producto6.php"><h2>Samsung S10 Plus</h2></a>
-            <p>ARS $125.000</p>
-            <br>
-            <a href="producto9.php"><img src="img/moto-g7.jpg" alt="logotipo" class="img-fluid" width="300px"></a>
-            <a href="producto9.php"><h2>Motorola G7</h2></a>
-            <p>ARS $18.000</p>
-            <br>
-        </div>
+        </div> --}}
+
+        
         <section class="from-blog spad">
         <div class="container">
             <div class="row">
@@ -88,8 +94,7 @@
     <a href="#" class="card-link">COMPRAR</a>
   </div>
 </div>
-                    
-                    </div>
+</div>
                 </div>          <div class="row">
                 <div class="col-lg-4 col-md-4 col-sm-6">
                     <div class="blog__item">
