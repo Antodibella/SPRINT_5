@@ -1,4 +1,4 @@
-@include('header')
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,7 +12,7 @@
 </head>
 <body class="preguntasbody">
 
-
+@include('header')
 <!--  Formas de pago  -->
 <section>
 
@@ -159,7 +159,7 @@
               <button type="submit" name="submit" class="boton1">Enviar</button>
             </form>    
         </section>   
-        
+        @include('footer')
         </body>
         </html>
-        @include('footer')
+        
