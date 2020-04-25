@@ -48,7 +48,8 @@
       --}}
                  
               <p>Por favor complete todo los campos</p>
-              <form class="agregarProducto" action="" method="post" enctype="multipart/form-data">  
+  <form class="agregarProducto" action="{{ route('productos.store')}}" method="post" enctype="multipart/form-data">  
+    @csrf
                 <input type="hidden" name="submitted" id="submitted" value="1">
                         <div class="form-row">
                            <div class="form-group col-md-7 m-auto">

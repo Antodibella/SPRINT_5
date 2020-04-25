@@ -74,7 +74,7 @@ Route::get('/administrador', function () {
    return view("administrador");
 });
 
-Route::post('/administrador', 'agregarProductosController@producto');
+Route::post('/administrador', 'productosController@store')->name('productos.store');
 
 
 Auth::routes();
