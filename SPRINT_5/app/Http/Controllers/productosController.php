@@ -73,7 +73,7 @@ class productosController extends Controller
     {
         $producto->update([
 
-        ])
+        ]);
     }
 
     public function delete(producto $producto)

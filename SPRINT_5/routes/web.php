@@ -75,7 +75,7 @@ Route::get('/administrador', function () {
 });
 
 Route::post('/administrador', 'productosController@store')->name('productos.store');
-
+Route::resource('peliculas', 'PeliculaController');
 
 Auth::routes();
 
