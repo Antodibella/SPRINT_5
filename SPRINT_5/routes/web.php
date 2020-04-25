@@ -47,9 +47,22 @@ Route::get('/quienessomos', function () {
    return view ("quienessomos");
 });
 
+Route::get('/productos', function () {
+   return view ("listadodeproductos");
+});
+
 Route::get('/productos', "productosController@listado" );
 
-Route::get('/productos/{id}', "productosController@detalle");
+//Route::get('/productos/{id}', "productosController@detalle");
+
+Route::get('/producto/{id}', function ($id) {
+   $vac = compact("id"); 
+   return view ("detalleproducto", $vac);
+});
+
+Route::get('/producto/{id}', "productosController@detalle" );
+
+// Route::get('/productos/iphone', "productosController@iphone" );
 
  Route::get('/registrarse', function () {
     return "Registrarse";
@@ -63,11 +76,8 @@ Route::get('/administrador', function () {
 
 Route::post('/administrador', 'agregarProductosController@producto');
 
-// este codigo sirve para cada producto individual pero le falta algo 
-Route::get('/producto/{id}', function ($id) {
-    $vac = compact("id");
-    return view ("producto", $vac);
-});
+
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/home', 'HomeController@index')->name('home'); 
+

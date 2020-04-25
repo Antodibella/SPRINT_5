@@ -25,7 +25,7 @@
                 <div class="col-md-4 col-lg-3">
                     <a href="producto?id=<?=$producto['id']?>"><img src="{{-- mostrar imagen db --}}" alt="logotipo" class="img-fluid" width="300px"></a> 
                     <a href="producto?id=<?=$producto['id']?>"><h2><?=$producto['modelo']?></h2></a>
-                    <p>ARS <?=$productos['precio']?></p>
+                    <p>ARS <?= $productos['precio']?></p>
                 
                 </div>
             <?php endforeach; ?>
