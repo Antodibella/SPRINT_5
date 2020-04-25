@@ -66,7 +66,6 @@ class productosController extends Controller
         //    productoNuevo -> precio = $req["precio"];
         //    productoNuevo -> stock = $req["stock"];
         
-        //productoNuevo -> save();
         return redirect("/administrador"); 
     }
 
