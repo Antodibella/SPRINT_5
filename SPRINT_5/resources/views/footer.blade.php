@@ -1,5 +1,5 @@
  <!--  BARRA DE PIE DE PAGINA  -->
- <footer class="abajo">
+ <footer>
     <nav class="navbar navbar-expand-lg navbar-light ">
     <a href="index"><img src="img/LOGO.png" alt="logotipo" class="logo"></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
