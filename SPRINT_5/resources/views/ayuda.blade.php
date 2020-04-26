@@ -1,6 +1,6 @@
 @extends('layouts.plantilla')
 @section('header_title')
-    Ayuda
+    Preguntas Frecuentes - TecnoMovil
 @endsection
 @section('content')
     
@@ -25,7 +25,7 @@
 <br>
 <div class="row">
     <div class="col-md-6">
-    <img src="{{ asset("storage/$prdocuto->foto")}}" alt="">
+    {{-- <img src="{{ asset("storage/$prodcuto->foto")}}" alt=""> --}}
         <h1 class="preguntasreg"> PAGO EN FORMA ONLINE</h1> 
         <h1 class="preguntasreg">(NO PRESENCIAL)</h1> 
         <br> 

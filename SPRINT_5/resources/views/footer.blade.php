@@ -6,8 +6,8 @@
     <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-    <div class="navbar-nav m-auto">
-    <a class="nav-item nav-link active" href="quienessomos">QuienesSomos<span class="sr-only">(current)</span></a>
+    <div class="navbar-nav m-auto"> 
+    <a class="nav-item nav-link active" href="quienessomos">¿Quienes&nbspSomos?<span class="sr-only">(current)</span></a>
     <a class="nav-item nav-link active" href="Registrarse">Registrarse <span class="sr-only">(current)</span></a>
     <a class="nav-item nav-link active" href="ayuda">Ayuda<span class="sr-only">(current)</span></a>
     <!--     <i class="fab fa-twitter"></i>

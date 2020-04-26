@@ -1,4 +1,11 @@
-@extends('layouts.app')
+{{-- @extends('layouts.app') --}}
+
+@extends('layouts.plantilla')
+@section('header_title')
+   Home - TecnoMovil
+@endsection
+
+    
 
 @section('content')
 <div class="container">
