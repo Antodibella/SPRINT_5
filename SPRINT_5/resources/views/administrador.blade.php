@@ -140,12 +140,13 @@
             {{ csrf_field() }}
             <label for="inputState">Elegir Producto que desea borrar</label>
             
-            <select id="borrar" name="borrar" value="" class="form-control">
+            <select id="borrar" name="borrar" value="{{$producto['id'] ?? ''}}" class="form-control">
               <?php foreach($productos as $producto) : ?>
-              <option>{{$producto['marca']}}</option>
+              <option>{{$producto['id']}}</option>
               <?php endforeach; ?>
 
               <input type="hidden" name="id" value="{{$producto->id ?? ''}}">
+              </select>
               <button type="submit" name="submit" class="boton1">BORRAR</button>
 
               <br><br>

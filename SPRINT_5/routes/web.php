@@ -75,10 +75,12 @@ Route::get('/administrador', function () {
 });
 
 Route::post('/administrador', 'productosController@store')->name('productos.store');
-Route::resource('peliculas', 'PeliculaController');
+
+Route::get('/administrador', "productosController@listaPro" );
+
+Route::post('/borrarProducto','productosController@borrar')->name('productos.borrar');
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home'); 
 
-Route::post('/borrarProducto','productosController@borrar');

@@ -16,6 +16,14 @@ class productosController extends Controller
         $vac = compact("productos");
         return view('listadodeproductos', $vac);
     }
+    public function listaPro(){
+
+       
+        $productos = producto::All();
+        // sirve para ver el arrays de productos --> dd($productos);
+        $vac = compact("productos");
+        return view('administrador', $vac);
+    }
     
     
     public function detalle($id){
