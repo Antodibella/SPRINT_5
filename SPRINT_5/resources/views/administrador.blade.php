@@ -25,6 +25,9 @@
         @endforeach
     </ul>
   @endif  --}}
+  <div>
+    para commit
+  </div>
    <img class="localadmin" src="/img/local.jpg" alt="" width="100%">
    
    
@@ -58,13 +61,13 @@
     </div>
     <br><br>
     <div class="form-group col-md-7 m-auto">
-      <label for="foto"> Imagen:</label>
+      <label for="foto1"> Imagen:</label>
       <br>
       <input type="file" class="" name="foto1" id="foto1" value="" >
     </div>
     <br><br>
     <div class="form-group col-md-7 m-auto">
-      <label for="foto"> Imagen:</label>
+      <label for="foto2"> Imagen:</label>
       <br>
       <input type="file" class="" name="foto2" id="foto2" value="" >
     </div>

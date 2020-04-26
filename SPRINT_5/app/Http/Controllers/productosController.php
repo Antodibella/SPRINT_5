@@ -11,7 +11,7 @@ class productosController extends Controller
     public function listado(){
 
        
-        $productos = producto::paginate(12);
+        $productos = producto::paginate(6);
         // sirve para ver el arrays de productos --> dd($productos);
         $vac = compact("productos");
         return view('listadodeproductos', $vac);
@@ -48,7 +48,9 @@ class productosController extends Controller
             "caracteristicas"=> "required | string |max:255",
             "precio"=> "required | numeric ",
             "stock"=> "required | integer ",
-            "foto" => "required | file"
+            "foto" => "file",
+            "foto1" => "file | nullable",
+            "foto2" => "file | nullable"
             
     
             ];
@@ -66,7 +68,7 @@ class productosController extends Controller
         /// agregar foto y obtner el nombre
         $ruta = $req-> file("foto")-> store("public");
         $nombreArchivo = basename($ruta);
-        
+        //if para si esta vacio agregue null vase de dato
         $ruta1 = $req-> file("foto1")-> store("public");
         $nombreArchivo1 = basename($ruta1);
         
