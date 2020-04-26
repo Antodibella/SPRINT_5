@@ -16,7 +16,7 @@
     <br><br><br> 
      {{-- <?php ?>
                 
-                @if($errores !== 0): 
+                @if($errores ?? ''): 
                 <ul>
        @foreach ($errores as $error) 
         <li>
@@ -129,15 +129,23 @@
  
 <div class="modal-content">
  <div class="modal-body">
+
    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-     <span aria-hidden="true">&times;</span>
+   
+    <span aria-hidden="true">&times;</span>
    </button>
          <h1>BORRAR PRODUCTOS</h1>
 
-          <form method="POST" action="administrador" enctype="multipart/form-data">
+          <form method="POST" action="/borrarProducto">
+            {{ csrf_field() }}
+            <label for="inputState">Elegir Producto que desea borrar</label>
             
-              <p>Por favor complete todo los campos</p>
-              
+            <select id="borrar" name="borrar" value="" class="form-control">
+              <?php foreach($productos as $producto) : ?>
+              <option>{{$producto['marca']}}</option>
+              <?php endforeach; ?>
+
+              <input type="hidden" name="id" value="{{$producto->id ?? ''}}">
               <button type="submit" name="submit" class="boton1">BORRAR</button>
 
               <br><br>

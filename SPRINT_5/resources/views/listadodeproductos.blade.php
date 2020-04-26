@@ -23,10 +23,11 @@
                 </div>
             <?php endforeach; ?>
            
+            {{$productos->links()}}
             
         </div>
     
-        </div> 
+        
     </section>
 
 @endsection

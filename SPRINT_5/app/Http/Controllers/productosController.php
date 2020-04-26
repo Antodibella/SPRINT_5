@@ -10,12 +10,13 @@ class productosController extends Controller
 {
     public function listado(){
 
-        $productos = producto::all();
-
+       
+        $productos = producto::paginate(12);
         // sirve para ver el arrays de productos --> dd($productos);
         $vac = compact("productos");
         return view('listadodeproductos', $vac);
     }
+    
     
     public function detalle($id){
         $producto = producto::find($id);
@@ -85,9 +86,12 @@ class productosController extends Controller
         ]);
     }
 
-    public function delete(producto $producto)
+    public function borrar(Request $formborrar)
     {
+        $id = $formborrar["id"];
+        $producto = Producto::find($id);
         $producto->delete();
+        return redirect("/administrador");  
     }
 }
 
