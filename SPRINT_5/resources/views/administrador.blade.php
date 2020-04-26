@@ -13,7 +13,18 @@
         <button type="button" class="btn btn-secondary"  data-toggle="modal" data-target="#editar">Editar Productos</button>
         <button type="button" class="btn btn-secondary"  data-toggle="modal" data-target="#borrar">Borrar Productos</button>
       </div>
-    <br><br><br>
+    <br><br><br> 
+     {{-- <?php ?>
+                
+                @if($errores !== 0): 
+                <ul>
+       @foreach ($errores as $error) 
+        <li>
+          {{error}}
+        </li> 
+        @endforeach
+    </ul>
+  @endif  --}}
    <img class="localadmin" src="/img/local.jpg" alt="" width="100%">
    
    
@@ -21,74 +32,70 @@
   {{-- AGREGAR PRODUCTO --}}
   <div class="modal fade bd-example-modal-xl" tabindex="-1" role="dialog" aria-labelledby="myExtraLargeModalLabel" aria-hidden="true" id="agregar">
    
-           <div class="modal-dialog modal-xl">
+<div class="modal-dialog modal-xl">
         
       <div class="modal-content">
         <div class="modal-body">
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
-                <h1>AGREGAR PRODUCTOS</h1>
-         {{--  <ul>
-       @foreach ($errores as $error) 
-        <li>
-            {{error}}
-        </li> 
-        @endforeach
-    </ul>
-  
+            <h1>AGREGAR PRODUCTOS</h1>
         
-    @endforeach
-      --}}
                  
-              <p>Por favor complete todo los campos</p>
+  <p>Por favor complete todo los campos</p>
   <form class="agregarProducto" action="{{ route('productos.store')}}" method="post" enctype="multipart/form-data">  
     @csrf
-                <input type="hidden" name="submitted" id="submitted" value="1">
-                        <div class="form-row">
-                           <div class="form-group col-md-7 m-auto">
-                               <label for="marca"> Marca:</label>
-                               <input type="name" class="form-control" name="marca" id="marca" value="" placeholder="Marca" required>
-                           </div>
-                           <div class="form-group col-md-7 m-auto">
-                            <label for="imagen"> Imagen:</label>
-                            <br>
-                            <input type="file" class="" name="imagen" id="marca" value=""  required>
-                        </div>
-                        <br><br>
-                           <div class="form-group col-md-7 m-auto">
-                               <label for="modelo"> Modelo:</label>
-                               <input type="modelo" class="form-control" name="modelo" value=""  id="modelo" placeholder="Modelo" required>
-                           </div>
-                           <div class="form-group col-md-7 m-auto ">
-                                   <label for="exampleFormControlTextarea1">Caracteristicas</label>
-                                   <textarea class="form-control" name="caracteristicas" value=""  id="exampleFormControlTextarea1" rows="3" cols="80"></textarea>
-                                 </div>
-                           <div class="form-group col-md-7 m-auto">
-                            <label for="precio"> Precio:</label>
-                            <input type="precio" class="form-control" name="precio" value=""  id="precio" placeholder="Precio">
-                        </div>
-                        <div class="form-group col-md-7 m-auto">
-                            <label for="strock"> Stock:</label>
-                            <input type="stock" class="form-control" name="stock" value=""  id="stock" placeholder="Stock">
-                        </div>
-                           <br>
-                           
-                         <br><br>
-                         
-                         
-                       </div>
-                     <button type="submit" name="submit" class="boton1">GUARDAR</button>
-                   </form>
-                   <br> 
-              
-        
-              <br><br>
+    <input type="hidden" name="submitted" id="submitted" value="1">
+    <div class="form-row">
+      <div class="form-group col-md-7 m-auto">
+      <label for="marca"> Marca:</label>
+      <input type="name" class="form-control" name="marca" id="marca" value="" placeholder="Marca" required>
+    </div>
+    <div class="form-group col-md-7 m-auto">
+      <label for="foto"> Imagen:</label>
+      <br>
+      <input type="file" class="" name="foto" id="foto" value=""  required>
+    </div>
+    <br><br>
+    <div class="form-group col-md-7 m-auto">
+      <label for="foto"> Imagen:</label>
+      <br>
+      <input type="file" class="" name="foto1" id="foto1" value="" >
+    </div>
+    <br><br>
+    <div class="form-group col-md-7 m-auto">
+      <label for="foto"> Imagen:</label>
+      <br>
+      <input type="file" class="" name="foto2" id="foto2" value="" >
+    </div>
+    <br><br>
+    <div class="form-group col-md-7 m-auto">
+      <label for="modelo"> Modelo:</label>
+      <input type="modelo" class="form-control" name="modelo" value=""  id="modelo" placeholder="Modelo" required>
+    </div>
+    <div class="form-group col-md-7 m-auto ">
+      <label for="exampleFormControlTextarea1">Caracteristicas</label>
+      <textarea class="form-control" name="caracteristicas" value=""  id="exampleFormControlTextarea1" rows="3" cols="80"></textarea>
+    </div>
+    <div class="form-group col-md-7 m-auto">
+      <label for="precio"> Precio:</label>
+      <input type="precio" class="form-control" name="precio" value=""  id="precio" placeholder="Precio">
+    </div>
+    <div class="form-group col-md-7 m-auto">
+      <label for="strock"> Stock:</label>
+      <input type="stock" class="form-control" name="stock" value=""  id="stock" placeholder="Stock">
+     </div>
+    <br><br><br>
+    </div>
+    <button type="submit" name="submit" class="boton1">GUARDAR</button>
+    </form>
+    <br><br><br>
           
-        </div>
       </div>
     </div>
+    </div>
   </div>
+
    <!-- EDITAR PRODUCTO -->
    <div class="modal fade bd-example-modal-xl" tabindex="-1" role="dialog" aria-labelledby="myExtraLargeModalLabel" aria-hidden="true" id="editar">
         

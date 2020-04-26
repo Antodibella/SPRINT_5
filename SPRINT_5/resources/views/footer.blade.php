@@ -1,15 +1,15 @@
  <!--  BARRA DE PIE DE PAGINA  -->
  <footer>
     <nav class="navbar navbar-expand-lg navbar-light ">
-    <a href="index"><img src="img/LOGO.png" alt="logotipo" class="logo"></a>
+    <a href="/index"><img src="/img/LOGO.png" alt="logotipo" class="logo"></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
     <div class="navbar-nav m-auto"> 
-    <a class="nav-item nav-link active" href="quienessomos">¿Quienes&nbspSomos?<span class="sr-only">(current)</span></a>
-    <a class="nav-item nav-link active" href="Registrarse">Registrarse <span class="sr-only">(current)</span></a>
-    <a class="nav-item nav-link active" href="ayuda">Ayuda<span class="sr-only">(current)</span></a>
+    <a class="nav-item nav-link active" href="/quienessomos">¿Quienes&nbspSomos?<span class="sr-only">(current)</span></a>
+    <a class="nav-item nav-link active" href="/register">Registrarse <span class="sr-only">(current)</span></a>
+    <a class="nav-item nav-link active" href="/ayuda">Ayuda<span class="sr-only">(current)</span></a>
     <!--     <i class="fab fa-twitter"></i>
     <i class="fab fa-facebook-f"></i>
     -->

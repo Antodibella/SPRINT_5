@@ -1,5 +1,10 @@
-@extends('layouts.app')
+{{-- @extends('layouts.app') --}}
+@extends('layouts.plantilla')
+@section('header_title')
+    Registrarse - TecnoMovil
+@endsection
 
+    
 @section('content')
 <div class="container">
     <div class="row justify-content-center">

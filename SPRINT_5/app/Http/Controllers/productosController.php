@@ -38,7 +38,8 @@ class productosController extends Controller
             "modelo"=> "required | string | min:2",
             "caracteristicas"=> "required | string |max:255",
             "precio"=> "required | numeric ",
-            "stock"=> "required | integer "
+            "stock"=> "required | integer ",
+            "foto" => "required | file"
             
     
             ];
@@ -48,23 +49,31 @@ class productosController extends Controller
             "min"=> "El campo :attribute tiene un minimo de :min",
             "integer"=> "El campo :attribute no es un numero entero",
             "numeric"=> "El campo :attribute no es correcto",
-            "max"=> " El campo :attribute tiene un maximo de :max"
+            "max"=> " El campo :attribute tiene un maximo de :max",
+            "file"=> "El campo :atribute no es una foto"
             ];
         $this->validate($req, $reglas, $mensajes);
 
         /// agregar foto y obtner el nombre
-
+        $ruta = $req-> file("foto")-> store("public");
+        $nombreArchivo = basename($ruta);
+        
+        $ruta1 = $req-> file("foto1")-> store("public");
+        $nombreArchivo1 = basename($ruta1);
+        
+        $ruta2 = $req-> file("foto2")-> store("public");
+        $nombreArchivo2 = basename($ruta2);
         producto::create([
-            'marca'=> $req["modelo"],
+            'marca'=> $req["marca"],
+            'foto'=>$nombreArchivo ,
+            'foto1'=>$nombreArchivo1 ,
+            'foto2'=>$nombreArchivo2 ,
             'modelo' => $req["modelo"],
             'caracteristicas'=> $req["caracteristicas"],
-
+            'precio' => $req["precio"],
+            'stock' => $req["stock"],
         ]);
-        // productoNuevo -> marca = $req["marca"];
-        //    productoNuevo -> modelo = $req["modelo"];
-        //    productoNuevo -> caracteriscas = $req["caracteristicas"];
-        //    productoNuevo -> precio = $req["precio"];
-        //    productoNuevo -> stock = $req["stock"];
+        
         
         return redirect("/administrador"); 
     }

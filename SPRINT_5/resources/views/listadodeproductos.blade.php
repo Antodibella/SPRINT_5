@@ -12,13 +12,13 @@
         <div  class="row">
             <?php foreach($productos as $producto) : ?>
             
-                <div class="col-md-4 col-lg-3">
-                    <a href="producto?id=<?=$producto['id']?>"><img src="{{-- mostrar imagen db --}}" alt="logotipo" class="img-fluid" width="300px"></a> 
+                <div class="col-md-4 col-lg-4">
+                <a href="producto/<?=$producto['id']?>"><img src="/storage/{{$producto->foto}}" alt="logotipo" class="img-fluid" width="300px"></a> 
                     
-                    <a href="producto?id=<?=$producto['id']?>"><h2><?=$producto['marca']?></h2></a>
-                    <a href="producto?id=<?=$producto['id']?>"><h2><?=$producto['modelo']?></h2></a>
-                    <a href="producto?id=<?=$producto['id']?>"><h2><?=$producto['precio']?></h2></a>
-                    <p>ARS <? = $productos['precio']?></p>
+                    <a href="producto/<?=$producto['id']?>"><h2><?=$producto['marca']?></h2></a>
+                    <a href="producto/<?=$producto['id']?>"><h2><?=$producto['modelo']?></h2></a>
+                    <h2>ARS <?=$producto['precio']?></h2>
+                    
                 
                 </div>
             <?php endforeach; ?>
