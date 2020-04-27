@@ -49,8 +49,8 @@ class productosController extends Controller
             "precio"=> "required | numeric ",
             "stock"=> "required | integer ",
             "foto" => "file",
-            "foto1" => "file | nullable",
-            "foto2" => "file | nullable"
+            "foto1"=> "nullable",
+            "foto2"=>"nullable"
             
     
             ];
@@ -70,10 +70,21 @@ class productosController extends Controller
         $nombreArchivo = basename($ruta);
         //if para si esta vacio agregue null vase de dato
         $ruta1 = $req-> file("foto1")-> store("public");
-        $nombreArchivo1 = basename($ruta1);
+        if($ruta1 === null){
+         $nombreArchivo1=null;   
+        }
+        else{
+             $nombreArchivo1 = basename($ruta1);
+        }
         
         $ruta2 = $req-> file("foto2")-> store("public");
-        $nombreArchivo2 = basename($ruta2);
+        if($ruta2 === null){
+            $nombreArchivo2 = null;   
+           }
+           else{
+                $nombreArchivo2 = basename($ruta2);
+           }
+           
         producto::create([
             'marca'=> $req["marca"],
             'foto'=>$nombreArchivo ,
@@ -96,9 +107,9 @@ class productosController extends Controller
         ]);
     }
 
-    public function borrar(Request $formborrar)
+    public function borrar(Request $req)
     {
-        $id = $formborrar["id"];
+        $id = $req['borrar'];
         $producto = Producto::find($id);
         $producto->delete();
         return redirect("/administrador");  

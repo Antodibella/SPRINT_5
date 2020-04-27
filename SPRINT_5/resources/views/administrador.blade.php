@@ -25,9 +25,7 @@
         @endforeach
     </ul>
   @endif  --}}
-  <div>
-    para commit
-  </div>
+  
    <img class="localadmin" src="/img/local.jpg" alt="" width="100%">
    
    
@@ -63,13 +61,13 @@
     <div class="form-group col-md-7 m-auto">
       <label for="foto1"> Imagen:</label>
       <br>
-      <input type="file" class="" name="foto1" id="foto1" value="" >
+      <input type="file" class="" name="foto1" id="foto1" value="null" >
     </div>
     <br><br>
     <div class="form-group col-md-7 m-auto">
       <label for="foto2"> Imagen:</label>
       <br>
-      <input type="file" class="" name="foto2" id="foto2" value="" >
+      <input type="file" class="" name="foto2" id="foto2" value="null" >
     </div>
     <br><br>
     <div class="form-group col-md-7 m-auto">
@@ -141,15 +139,14 @@
 
           <form method="POST" action="/borrarProducto">
             {{ csrf_field() }}
-            <label for="inputState">Elegir Producto que desea borrar</label>
+            <label for="borrar"><h3>¿Que producto desea borrar?</h3></label>
             
-            <select id="borrar" name="borrar" value="{{$producto['id'] ?? ''}}" class="form-control">
+            <select id="borrar" name="borrar" class="form-control">
               <?php foreach($productos as $producto) : ?>
-              <option>{{$producto['id']}}</option>
+              <option value="{{$producto['id']}}">{{$producto['marca']}}</option>
               <?php endforeach; ?>
-
-              <input type="hidden" name="id" value="{{$producto->id ?? ''}}">
-              </select>
+            </select>
+      
               <button type="submit" name="submit" class="boton1">BORRAR</button>
 
               <br><br>

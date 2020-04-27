@@ -8,7 +8,7 @@
 <!-- Descripcion del procucto -->
 <section class="producto">
      <br><br>   
-    <div class="col-md-9 col-lg-4">
+    <div class="col-md-6 col-lg-4">
 
         <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
             <ol class="carousel-indicators">
@@ -39,7 +39,7 @@
            
                                 
     </div>
-    <div class="col-md-9 col-lg-4">
+    <div class="col-md-6 col-lg-4" style="float:left ">
                 
         <ul>
             <h2><?=$producto['marca']?> <?=$producto['modelo']?></h2>
