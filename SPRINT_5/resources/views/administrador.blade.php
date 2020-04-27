@@ -110,9 +110,17 @@
       <h1>EDITAR PRODUCTOS</h1>
 
   <br>
-    <p>Por favor complete todo los campos</p>
+  <form method="POST" action="/editarProducto">
+    {{ csrf_field() }}
+    <label for="editar"><h3>¿Que producto desea borrar?</h3></label>
+    
+    <select id="esitar" name="editar" class="form-control">
+      <?php foreach($productos as $producto) : ?>
+      <option value="{{$producto['id']}}">{{$producto['marca']}}</option>
+      <?php endforeach; ?>
+    </select>
 
-    <p>lista de productos </p>
+      <button type="submit" name="submit" class="boton1">BORRAR</button>
     
     <button type="submit" name="submit" class="boton1">GUARDAR</button>
 

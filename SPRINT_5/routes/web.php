@@ -74,11 +74,13 @@ Route::get('/administrador', function () {
    return view("administrador");
 });
 
-Route::post('/administrador', 'productosController@store')->name('productos.store');
-
 Route::get('/administrador', "productosController@listaPro" );
 
+Route::post('/administrador', 'productosController@store')->name('productos.store');
+
 Route::post('/borrarProducto','productosController@borrar')->name('productos.borrar');
+
+Route::post('/editarProducto','productosController@editar')->name('productos.editar');
 
 Auth::routes();
 

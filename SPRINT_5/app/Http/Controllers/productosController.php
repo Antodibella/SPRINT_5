@@ -69,23 +69,15 @@ class productosController extends Controller
         $ruta = $req-> file("foto")-> store("public");
         $nombreArchivo = basename($ruta);
         //if para si esta vacio agregue null vase de dato
-        $ruta1 = $req-> file("foto1")-> store("public");
-        if($ruta1 === null){
-         $nombreArchivo1=null;   
-        }
-        else{
-             $nombreArchivo1 = basename($ruta1);
-        }
         
+        $ruta1 = $req-> file("foto1")-> store("public");
+        $nombreArchivo1 = basename($ruta1);
+ 
         $ruta2 = $req-> file("foto2")-> store("public");
-        if($ruta2 === null){
-            $nombreArchivo2 = null;   
-           }
-           else{
-                $nombreArchivo2 = basename($ruta2);
-           }
+        $nombreArchivo2 = basename($ruta2);
+    
            
-        producto::create([
+            producto::create([
             'marca'=> $req["marca"],
             'foto'=>$nombreArchivo ,
             'foto1'=>$nombreArchivo1 ,
