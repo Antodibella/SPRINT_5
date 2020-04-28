@@ -14,9 +14,9 @@
         <button type="button" class="btn btn-secondary"  data-toggle="modal" data-target="#borrar">Borrar Productos</button>
       </div>
     <br><br><br> 
-     {{-- <?php ?>
+    
                 
-                @if($errores ?? ''): 
+     {{--            @if($errores ?? ''): 
                 <ul>
        @foreach ($errores as $error) 
         <li>
@@ -110,9 +110,9 @@
       <h1>EDITAR PRODUCTOS</h1>
 
   <br>
-  <form method="POST" action="/editarProducto">
+  <form method="GET" action="/editarProducto">
     {{ csrf_field() }}
-    <label for="editar"><h3>¿Que producto desea borrar?</h3></label>
+    <label for="editar"><h3>¿Que producto desea editar?</h3></label>
     
     <select id="esitar" name="editar" class="form-control">
       <?php foreach($productos as $producto) : ?>
@@ -120,9 +120,9 @@
       <?php endforeach; ?>
     </select>
 
-      <button type="submit" name="submit" class="boton1">BORRAR</button>
+    <a href="editarProducto?id=<?=$producto['id']?>"><button type="button" name="button" class="boton1">EDITAR</button></a>
     
-    <button type="submit" name="submit" class="boton1">GUARDAR</button>
+  
 
     <br><br>
 </form>

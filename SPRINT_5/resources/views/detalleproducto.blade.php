@@ -5,10 +5,9 @@
 @section('content')
 
     
-<!-- Descripcion del procucto -->
-<section class="producto">
-     <br><br>   
-    <div class="col-md-6 col-lg-4">
+<section class="producto"> 
+     <div class="row">
+    <div class="col-md-6 col-lg-6">
 
         <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
             <ol class="carousel-indicators">
@@ -39,7 +38,7 @@
            
                                 
     </div>
-    <div class="col-md-6 col-lg-4" style="float:left ">
+    <div class="col-md-6 col-lg-6">
                 
         <ul>
             <h2><?=$producto['marca']?> <?=$producto['modelo']?></h2>
@@ -52,6 +51,8 @@
         <button type="button" class="btn btn-outline-primary"><a href="carrito.php?nombre=Iphone-8&precio=65000">Agregar al carrito</button>
         <br><br>
     </div>
+</div>
+<br><br><br><br><br><br>
 </section>
 
 @endsection
