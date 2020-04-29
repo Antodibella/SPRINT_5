@@ -110,18 +110,17 @@
       <h1>EDITAR PRODUCTOS</h1>
 
   <br>
-  <form method="GET" action="/editarProducto">
-    {{ csrf_field() }}
+  <form method="POST" action="/detalleProducto">
     <label for="editar"><h3>¿Que producto desea editar?</h3></label>
     
-    <select id="esitar" name="editar" class="form-control">
+    <select id="editar" name="editar" class="form-control">
       <?php foreach($productos as $producto) : ?>
       <option value="{{$producto['id']}}">{{$producto['marca']}}</option>
       <?php endforeach; ?>
     </select>
 
-    <a href="editarProducto?id=<?=$producto['id']?>"><button type="button" name="button" class="boton1">EDITAR</button></a>
-    
+    <a href="editarproducto"><button type="button" name="button"  class="boton1">EDITAR</button></a>
+    </form>
   
 
     <br><br>

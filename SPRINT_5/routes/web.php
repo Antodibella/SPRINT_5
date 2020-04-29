@@ -23,10 +23,6 @@ Route::get('/index', function () {
     return view ("Productos");
  });
 
- Route::get('/producto', function () {
-    return view ("Producto");
- });
-
  Route::get('/ayuda', function () {
     return view ("ayuda");
  });
@@ -41,6 +37,10 @@ Route::get('/index', function () {
 
  Route::get('/miperfil', function () {
    return view ("miperfil");
+});
+
+Route::get('/producto', function () {
+   return view ("Producto");
 });
 
 Route::get('/quienessomos', function () {
@@ -80,9 +80,16 @@ Route::post('/administrador', 'productosController@store')->name('productos.stor
 
 Route::post('/borrarProducto','productosController@borrar')->name('productos.borrar');
 
-Route::post('/editarProducto','productosController@editar')->name('productos.editar');
+Route::post('/administrador/{{id}}','productosController@editar')->name('productos.editar');
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home'); 
 
+
+Route::get('/administrador/{id}', function ($id) {
+   $vac = compact("id"); 
+   return view ("editarproducto", $vac);
+});
+
+Route::post('editarproducto', "productosController@detalleProducto" );

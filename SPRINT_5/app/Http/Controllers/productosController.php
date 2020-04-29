@@ -33,6 +33,14 @@ class productosController extends Controller
 
     }
 
+    public function detalleProducto(Request $req){
+        $id = $req['editar'];
+        $producto = producto::find($id);
+        $vac = compact("producto");
+        return view("administrador/{{id}}", $vac);
+
+    }
+
     //esta funcion es de ejemplo para filtrar por marcas, en este caso iphone (NO FUNCIONA)
     public function iphone($id){
         $productos = producto::where("marca", "=" ,"iphone");
@@ -92,10 +100,18 @@ class productosController extends Controller
         return redirect("/administrador"); 
     }
 
-    public function update(producto $producto)
-    {
-        $producto->update([
+    public function update(producto $producto){
+        //convertir foto si la edito y guardarla
 
+        $producto->update([
+            'marca'=> $req["marca"],
+            'foto'=>$nombreArchivo ,
+            'foto1'=>$nombreArchivo1 ,
+            'foto2'=>$nombreArchivo2 ,
+            'modelo' => $req["modelo"],
+            'caracteristicas'=> $req["caracteristicas"],
+            'precio' => $req["precio"],
+            'stock' => $req["stock"],
         ]);
     }
 
