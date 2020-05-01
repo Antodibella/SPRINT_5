@@ -119,7 +119,7 @@
       <?php endforeach; ?>
     </select>
 
-    <a href="editarproducto"><button type="button" name="button"  class="boton1">EDITAR</button></a>
+    <button type="submit" name="submit"  class="boton1">EDITAR</button>
     </form>
   
 

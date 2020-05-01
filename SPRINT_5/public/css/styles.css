@@ -489,3 +489,9 @@ font-weight: bold;
      height:400px;
 
  }
+ /* Paginacion */
+ .productos .center{
+    margin-left: 40%;
+    margin-right: 40%;
+    width: 20%; 
+ }

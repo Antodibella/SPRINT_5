@@ -87,7 +87,7 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home'); 
 
 
-Route::get('/administrador/{id}', function ($id) {
+Route::get('/editarproducto/{id}', function ($id) {
    $vac = compact("id"); 
    return view ("editarproducto", $vac);
 });

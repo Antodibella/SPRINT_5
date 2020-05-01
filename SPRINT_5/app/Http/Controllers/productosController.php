@@ -37,7 +37,7 @@ class productosController extends Controller
         $id = $req['editar'];
         $producto = producto::find($id);
         $vac = compact("producto");
-        return view("administrador/{{id}}", $vac);
+        return view("editarproducto/{{id}}", $vac);
 
     }
 
@@ -104,14 +104,14 @@ class productosController extends Controller
         //convertir foto si la edito y guardarla
 
         $producto->update([
-            'marca'=> $req["marca"],
+            'marca'=> $producto["marca"],
             'foto'=>$nombreArchivo ,
             'foto1'=>$nombreArchivo1 ,
             'foto2'=>$nombreArchivo2 ,
-            'modelo' => $req["modelo"],
-            'caracteristicas'=> $req["caracteristicas"],
-            'precio' => $req["precio"],
-            'stock' => $req["stock"],
+            'modelo' => $producto["modelo"],
+            'caracteristicas'=> $producto["caracteristicas"],
+            'precio' => $producto["precio"],
+            'stock' => $producto["stock"],
         ]);
     }
 

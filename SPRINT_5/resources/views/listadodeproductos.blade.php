@@ -7,7 +7,7 @@
 
 
     <!--  SECCION  -->
-<section>
+<section class="productos">
         <br><br>
         <div  class="row">
             <?php foreach($productos as $producto) : ?>
@@ -23,11 +23,12 @@
                 </div>
             <?php endforeach; ?>
            
-            {{$productos->links()}}
+            
             
         </div>
-    
-        
+        <div class="center">
+    {{$productos->links()}}
+</div>
     </section>
 
 @endsection
