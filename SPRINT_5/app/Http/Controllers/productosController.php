@@ -11,7 +11,7 @@ class productosController extends Controller
     public function listado(){
 
        
-        $productos = producto::paginate(6);
+        $productos = producto::paginate(9);
         // sirve para ver el arrays de productos --> dd($productos);
         $vac = compact("productos");
         return view('listadodeproductos', $vac);
