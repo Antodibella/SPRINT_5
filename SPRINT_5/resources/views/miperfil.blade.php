@@ -1,12 +1,13 @@
 @extends('layouts.plantilla')
 @section('header_title')
     Mi Perfil - TecnoMovil
+
 @endsection
 @section('content')
     
   
     <section class="miperfil">
-        
+       
 
         
        
@@ -16,10 +17,9 @@
         <h1>Mi Perfil </h1>
        
         <ul>
-                <li><strong>Nombre: </strong>{{-- aca van datos de la db --}}</li>
-                <li><strong>Apellido: </strong>{{-- aca van datos de la db --}}</li>
-                <li><strong>Email: </strong>{{-- aca van datos de la db --}}</li>
-                <li><strong>Usuario: </strong>{{--datos--}}</li>
+                <li><strong>Nombre: </strong>{{ Auth::user()->name }} </li>
+                <li><strong>Apellido: </strong>{{ Auth::user()->surname }} </li>
+                <li><strong>Email: </strong>{{ Auth::user()->email }} </li>
             </ul>
             
 
@@ -30,15 +30,9 @@
             <div class="text-center" width="200px">
             {{-- <img class="fotoperfil" src="archivos/<?=/* $usuario['id'] */?>.jpg" alt=""> --}}
             </div>
-            {{-- <?php endif;?>
-            <?php if(count($errores)) : ?>                   
-                    <ul>
-                        <?php foreach($errores as $error): ?>
-                            <li><strong>{{$error}}</strong></li>
-                        <?php endforeach;?>
-                    </ul>
-                <?php endif;?> 
-            --}}
+
+            {{--Aca errores --}}
+
             <hr>
         <form action="miperfil" method="post"> <input type='submit' class="btn btn-secondary" name='salir' value='Salir' /> </form>   
         <br>
@@ -65,11 +59,11 @@
             
             <label for="name"><b>Nombre:</b></label>
             <br>
-            <input type="text" placeholder="Escriba su Nombre" name="name" value="<?= $usuario['nombre'] ?>" required>
+            <input type="text" placeholder="Escriba su Nombre" name="name" value="" required>
                 <br><br>
                 <label for="surname"><b>Apellido:</b></label>
                 <br>
-            <input type="text" placeholder="Escriba su Apellido" name="surname" value="<?= $usuario['apellido'] ?>" required>
+            <input type="text" placeholder="Escriba su Apellido" name="surname" value="" required>
                 <br><br>  
                 <label for="psw"><b>Contraseña:</b></label>
                 <br>

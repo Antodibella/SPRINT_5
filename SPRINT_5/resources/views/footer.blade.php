@@ -67,8 +67,8 @@
    <!-- Footer Links -->
  
    <!-- Copyright -->
-   <div class="footer-copyright text-center py-3">© 2020 Copyright:
-     <a href="/index"> TecnoMovil</a>
+   <div class="footer-copyright text-center py-3"><p class="foot">© 2020 Copyright:</p>
+     <a href="/index"> TecnoMovil - Todos los derechos reservados</a>
    </div>
  
 

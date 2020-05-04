@@ -439,7 +439,11 @@ font-weight: bold;
     background-color: black !important;
 }
 
-.page-footer a h5  {
+.page-footer a  {
+    color: white !important;
+}
+
+.page-footer h5  {
     color: white !important;
 }
 
