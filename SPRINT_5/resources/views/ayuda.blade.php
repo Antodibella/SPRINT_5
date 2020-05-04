@@ -32,38 +32,38 @@
 <div class="preguntasfrecuentes">
 
 <div class="row">
-        <div class="col-md-4">
+<div class="col-md-4">
 <ul>
 <hr>
-<li> <A href="p1" data-toggle="modal" data-target="#p1">¿Los productos se encuentran en stock?</A></li>
+<li> <a href="p1" data-toggle="modal" data-target="#p1">¿Los productos se encuentran en stock?</a></li>
 <hr> 
-<li> <A href="p2" data-toggle="modal" data-target="#p2">¿Hacen envíos?</A></li>
+<li> <a href="p2" data-toggle="modal" data-target="#p2">¿Hacen envíos?</a></li>
 <hr> 
-<li> <A href="p3" data-toggle="modal" data-target="#p3">¿Cuáles son los horarios de atención?</A></li>
+<li> <a href="p3" data-toggle="modal" data-target="#p3">¿Cuáles son los horarios de atención?</a></li>
 <hr> 
-<li> <A href="p9" data-toggle="modal" data-target="#p10">¿Tengo que registrarme para comprar?</A></li>
+<li> <a href="p9" data-toggle="modal" data-target="#p10">¿Tengo que registrarme para comprar?</a></li>
 <hr>
 </div>
         <div class="col-md-4">
  <hr>       
-<li> <A href="p4" data-toggle="modal" data-target="#p4">¿Son precios Finales o más IVA?</A></li>
+<li> <a href="p4" data-toggle="modal" data-target="#p4">¿Son precios Finales o más IVA?</a></li>
 <hr> 
-<li> <A href="p5" data-toggle="modal" data-target="#p5">¿Entregan factura y garantía?</A></li>
+<li> <a href="p5" data-toggle="modal" data-target="#p5">¿Entregan factura y garantía?</a></li>
 <hr> 
-<li> <A href="p6" data-toggle="modal" data-target="#p6">¿Hacen factura A? ¿Cómo la solicito?</A></li>
+<li> <a href="p6" data-toggle="modal" data-target="#p6">¿Hacen factura A? ¿Cómo la solicito?</a></li>
 <hr>
-<li> <A href="p9" data-toggle="modal" data-target="#p11">¿Los precios son exclusivos para la tienda online?</A></li>
+<li> <a href="p9" data-toggle="modal" data-target="#p11">¿Los precios son para la tienda online?</a></li>
 <hr> 
 </div>
         <div class="col-md-4">
         <hr>
-<li> <A href="p7" data-toggle="modal" data-target="#p7">¿Como descargar mi factura desde la PC?</A></li>
+<li> <a href="p7" data-toggle="modal" data-target="#p7">¿Como descargar mi factura desde la PC?</a></li>
 <hr> 
-<li> <A href="p8" data-toggle="modal" data-target="#p8">¿Como realizo un pedido?</A></li>
+<li> <a href="p8" data-toggle="modal" data-target="#p8">¿Como realizo un pedido?</a></li>
 <hr> 
-<li> <A href="p9" data-toggle="modal" data-target="#p9">¿Que es la factura electronica?</A></li>
+<li> <a href="p9" data-toggle="modal" data-target="#p9">¿Que es la factura electronica?</a></li>
 <hr>
-<li> <A href="p9" data-toggle="modal" data-target="#p12">¿Tiene costo el envio?</A></li>
+<li> <a href="p9" data-toggle="modal" data-target="#p12">¿Tiene costo el envio?</a></li>
 <hr>
 </div>
 
@@ -402,7 +402,7 @@
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
-          <h2><h3>Pagos en forma online</h3>    
+          <h3>Pagos en forma online</h3>    
           <br>
           <hr>
               <li> Efectivo, Débito, Transferencia o depósito bancario. En todos estos casos se toma el mismo precio publicado en nuestra web</li>
@@ -464,8 +464,9 @@
                   <br><br>
                 </div>
                <!--<button type="submit" name="submit" class="boton1">Enviar</button>--> 
-              
-              <button type="submit" class="btn btn-secondary btn-lg">  Enviar  </button>
+               <div class="text-center">
+              <button type="submit" class="btn btn-dark">  Enviar  </button>
+               </div>
             </form> 
             </div>   
         </section>   

@@ -6,7 +6,7 @@
 
 /* BARRAS */
 .navbar {
-    background-color: darkgrey !important;
+    background-color: #020202 !important;
 }
 
 /* HOME */
@@ -142,7 +142,7 @@ height: 35px;
 }
 
 li .fa-shopping-cart:before{
-    color: black !important;
+    color: white !important;
 }
 
 
@@ -167,8 +167,12 @@ a:hover {
     padding-right: 50px;
     margin;
 }
+.navbar a {
+    color: rgb(238, 232, 232) !important;
+}
+
 .navbar {
-    background-color: darkgrey !important;
+    background-color: rgb(8, 8, 8) !important;
 }
 
 #grilla1 {
@@ -431,10 +435,17 @@ font-weight: bold;
     padding-left: 50px;
 }
 
+.page-footer {
+    background-color: black !important;
+}
+
+.page-footer a h5  {
+    color: white !important;
+}
 
 .card{
     margin-top: 15px;
-    padding-left: 30px; 
+    padding-left: 0px; 
 }
 
 /* MI PERFIL  */

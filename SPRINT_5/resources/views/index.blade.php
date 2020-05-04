@@ -6,6 +6,7 @@
     
 <!--  Banner  -->
 <section>
+
 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
 <ol class="carousel-indicators">
 <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -33,29 +34,27 @@
 </a>
 </div>
 
-<
 
 <!--  los mas vendidos  -->
 <div class="productos-mas-vendidos">
-
-<img class="los-mas-vendidos" width="700px" src="img/los mas vendidos.png" alt="logotipo" class="logo" class="img-fluid">
+<h2>Los más vendidos en TecnoMovil</h2>
 
 <div class="row">
 <div class="col-md-6 col-lg-4">
 <a href="producto2"><img class="foto"  src="img/apple-iphone-x--1.jpg" alt="Iphone X"></a>
-<img class="oferta" src="img/super sale .png" alt="supersale">
+
 <a href="producto2.php"><h2>Iphone X 256 gb</h2></a>
 <p class="index">ARS $85.000</p>
 </div>   
 <div class="col-md-6 col-lg-4">
 <a href="producto5"><img class="foto" src="img/samsung-galaxy-s9-001.jpg" alt="Samsung s9"></a>
-<img class="oferta" src="img/super sale .png" alt="supersale"> 
+
 <a href="producto5.php"><h2>Samsung S9</h2></a>
 <p class="index">ARS $29.000</p>   
 </div>
 <div class="col-md-6 col-lg-4">
-<a href="producto8"><img class="foto" src="img/moto-g6.jpeg" alt="Motorola G6"></a>
-<img class="oferta" src="img/super sale .png" alt="supersale">  
+<a href="producto8"><img class="foto" src="img/moto-g6.jpg" alt="Motorola G6"></a>
+ 
 <a href="producto8"><h2>Motorola G6</h2></a>
 <p class="index">ARS $16.000</p>
 </div>   
