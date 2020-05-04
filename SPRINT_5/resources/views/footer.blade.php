@@ -22,7 +22,7 @@
        <div class="col-md-3 mb-md-0 mb-3">
  
          <!-- Links -->
-         <h5 class="text-uppercase">Links</h5>
+         <h5 class="text-uppercase">CONTACTO</h5>
  
          <ul class="list-unstyled">
            <li>
@@ -42,17 +42,17 @@
        <div class="col-md-3 mb-md-0 mb-3">
  
          <!-- Links -->
-         <h5 class="text-uppercase">Links</h5>
+         <h5 class="text-uppercase">REDES SOCIALES</h5>
  
          <ul class="list-unstyled">
            <li>
-             <a href="/quienessomos">Sobre nosotros</a>
+             <a href="/quienessomos">Instagram</a>
            </li>
            <li>
-             <a href="/register">Registrarse</a>
+             <a href="/register">Facebook</a>
            </li>
            <li>
-             <a href="/ayuda">Ayuda</a>
+             <a href="/ayuda">LinkdIn</a>
            </li>
          </ul>
  
@@ -67,7 +67,7 @@
    <!-- Footer Links -->
  
    <!-- Copyright -->
-   <div class="footer-copyright text-center py-3"><p class="foot">© 2020 Copyright:</p>
+   <div class="footer-copyright text-center py-3"><p class="foot">© 2020 Copyright</p>
      <a href="/index"> TecnoMovil - Todos los derechos reservados</a>
    </div>
  
