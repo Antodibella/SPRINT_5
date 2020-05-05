@@ -34,10 +34,10 @@ class productosController extends Controller
     }
 
     public function detalleProducto(Request $req){
-        $id = $req['editar'];
+        $id = $req['id'];
         $producto = producto::find($id);
         $vac = compact("producto");
-        return view("editarproducto/{{id}}", $vac);
+        return view("editarproducto", $vac);
 
     }
 
@@ -72,18 +72,21 @@ class productosController extends Controller
             "file"=> "El campo :atribute no es una foto"
             ];
         $this->validate($req, $reglas, $mensajes);
-
+        $nombreArchivo1="";
+        $nombreArchivo2="";
         /// agregar foto y obtner el nombre
         $ruta = $req-> file("foto")-> store("public");
         $nombreArchivo = basename($ruta);
-        //if para si esta vacio agregue null vase de dato
-        
+        //if para si esta vacio agregue null base de dato
+        if(file("foto1")){
         $ruta1 = $req-> file("foto1")-> store("public");
         $nombreArchivo1 = basename($ruta1);
- 
+        }
+        if(file("foto2")){
         $ruta2 = $req-> file("foto2")-> store("public");
         $nombreArchivo2 = basename($ruta2);
-    
+        }
+        
            
             producto::create([
             'marca'=> $req["marca"],
@@ -100,7 +103,7 @@ class productosController extends Controller
         return redirect("/administrador"); 
     }
 
-    public function update(producto $producto){
+    public function editar(producto $producto){
         //convertir foto si la edito y guardarla
 
         $producto->update([

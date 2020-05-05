@@ -435,7 +435,7 @@
          <!--  Formulario  -->   
 
          <div class = "formularioayuda">
-         <form class="formularioregistro" action="" method="post">  
+         <form action="mailto:nicomanzanel@hotmail.com" method="get" enctype="text/plain">  
          <input type="hidden" name="submitted" id="submitted" value="1">
                 <div class="form-row">
                     <div class="form-group col-md-7 m-auto">
@@ -461,7 +461,9 @@
                              <br>
                             <textarea class="form-control" name="consulta" value=""  id="exampleFormControlTextarea1" rows="3" cols="80" placeholder="Escribe tu consulta aqui..."></textarea>
                           </div>
+
                   <br><br>
+                
                 </div>
                <!--<button type="submit" name="submit" class="boton1">Enviar</button>--> 
                <div class="text-center">
@@ -469,6 +471,7 @@
                </div>
             </form> 
             </div>   
+            <br><br>
         </section>   
         @endsection
         

@@ -80,16 +80,12 @@ Route::post('/administrador', 'productosController@store')->name('productos.stor
 
 Route::post('/borrarProducto','productosController@borrar')->name('productos.borrar');
 
-Route::post('/administrador/{{id}}','productosController@editar')->name('productos.editar');
+Route::post('/posteditar','productosController@editar')->name('productos.editar');
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home'); 
 
+Route::post('/editar',"productosController@detalleProducto");
+/* Route::post('/editarproducto/{{id}}',"productosController@editarProducto"); */
 
-Route::get('/editarproducto/{id}', function ($id) {
-   $vac = compact("id"); 
-   return view ("editarproducto", $vac);
-});
-
-Route::post('editarproducto', "productosController@detalleProducto" );

@@ -55,19 +55,19 @@
     <div class="form-group col-md-7 m-auto">
       <label for="foto"> Imagen:</label>
       <br>
-      <input type="file" class="" name="foto" id="foto" value=""  required>
+      <input type="file" class="" name="foto" id="foto"  required>
     </div>
     <br><br>
     <div class="form-group col-md-7 m-auto">
       <label for="foto1"> Imagen:</label>
       <br>
-      <input type="file" class="" name="foto1" id="foto1" value="null" >
+      <input type="file" class="" name="foto1" id="foto1"  >
     </div>
     <br><br>
     <div class="form-group col-md-7 m-auto">
       <label for="foto2"> Imagen:</label>
       <br>
-      <input type="file" class="" name="foto2" id="foto2" value="null" >
+      <input type="file" class="" name="foto2" id="foto2"  >
     </div>
     <br><br>
     <div class="form-group col-md-7 m-auto">
@@ -103,28 +103,29 @@
     <div class="modal-dialog modal-xl">
   
 <div class="modal-content">
-<form method="POST" action="/administrador" enctype="multipart/form-data">
+
  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
       <span aria-hidden="true">&times;</span>
     </button>
       <h1>EDITAR PRODUCTOS</h1>
 
   <br>
-  <form method="POST" action="/detalleProducto">
+  <form method="POST" action="/editar">
     <label for="editar"><h3>¿Que producto desea editar?</h3></label>
-    
-    <select id="editar" name="editar" class="form-control">
+    @csrf
+    <select id="editar" name="id" class="form-control">
       <?php foreach($productos as $producto) : ?>
-      <option value="{{$producto['id']}}">{{$producto['marca']}}</option>
+      <option value="{{$producto['id']}}"><a href="editarproducto">{{$producto['marca']}}</a></option>
       <?php endforeach; ?>
     </select>
+    
 
     <button type="submit" name="submit"  class="boton1">EDITAR</button>
     </form>
   
 
     <br><br>
-</form>
+
 </div>
 </div>
 </div>
