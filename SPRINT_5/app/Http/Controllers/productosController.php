@@ -72,7 +72,7 @@ class productosController extends Controller
             "file"=> "El campo :atribute no es una foto"
             ];
         $this->validate($req, $reglas, $mensajes);
-        $nombreArchivo1="";
+        /* $nombreArchivo1="";
         $nombreArchivo2="";
         /// agregar foto y obtner el nombre
         $ruta = $req-> file("foto")-> store("public");
@@ -85,8 +85,13 @@ class productosController extends Controller
         if(file("foto2")){
         $ruta2 = $req-> file("foto2")-> store("public");
         $nombreArchivo2 = basename($ruta2);
-        }
-        
+        } */
+        $ruta = $req-> file("foto")-> store("public");
+        $nombreArchivo = basename($ruta);
+        $ruta1 = $req-> file("foto1")-> store("public");
+        $nombreArchivo1 = basename($ruta1);
+        $ruta2 = $req-> file("foto2")-> store("public");
+        $nombreArchivo2 = basename($ruta2);
            
             producto::create([
             'marca'=> $req["marca"],
@@ -105,7 +110,13 @@ class productosController extends Controller
 
     public function editar(producto $producto){
         //convertir foto si la edito y guardarla
-
+        $ruta = $producto-> file("foto")-> store("public");
+        $nombreArchivo = basename($ruta);
+        $ruta1 = $producto-> file("foto1")-> store("public");
+        $nombreArchivo1 = basename($ruta1);
+        $ruta2 = $producto-> file("foto2")-> store("public");
+        $nombreArchivo2 = basename($ruta2);
+        
         $producto->update([
             'marca'=> $producto["marca"],
             'foto'=>$nombreArchivo ,
