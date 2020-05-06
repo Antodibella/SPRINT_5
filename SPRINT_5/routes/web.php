@@ -102,5 +102,5 @@ Route::get('/', function () {
    return view('ayuda');
 }); //Esta ruta la ponemos en la raiz para que nada mas ejecutar nuestra aplicación aparezca nuestro formulario
 
-Route::post('/ayuda2', 'EmailController@contact')->name('contact');
+Route::post('/ayuda', 'EmailController@contact')->name('contact');
 //Ruta que esta señalando nuestro formulario
