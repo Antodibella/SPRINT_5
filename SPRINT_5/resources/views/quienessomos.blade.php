@@ -72,7 +72,7 @@
 <br>
 <br>
 <br>
-      <h2 class="quienessomos">Tecno Movil es una empresa fundada en el año 2019 por Nicolas Manzanel, Lisandro Ferreyra y Antonela Di Bella. Dedicada a la comercialización de celulares.
+      <h2 class="quienessomos">Tecno Movil es una empresa fundada en el año 2019 por Nicolás Manzanel, Lisandro Ferreyra y Antonela Di Bella. Dedicada a la comercialización de celulares.
             Nuestros sólidos conocimientos en la materia garantizan la provisión de productos de última tecnología
             y óptima calidad.
 </div>

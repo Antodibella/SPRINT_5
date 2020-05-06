@@ -36,30 +36,23 @@
 
 
 <!--  los mas vendidos  -->
-<div class="productos-mas-vendidos">
-<h2>Los más vendidos en TecnoMovil</h2>
+<div  class="row">
+    <?php foreach($productos as $producto) : ?>
+    
+  <div class="col-md-4 col-lg-4">
+        <div class="card" style="width: 25rem;">
+        <div class="card-body">
+        <p class="card-title"><a href="producto/<?=$producto['id']?>"></p><p><?=$producto['marca']?> <?=$producto['modelo']?></p></a>
+        <a href="producto/<?=$producto['id']?>"><img src="/storage/{{$producto->foto}}" alt="logotipo" class="img-fluid" width="300px"></a>
+        <p>ARS <?=$producto['precio']?></p>
+        <a href="#" class="btn btn-dark">Comprar</a>
 
-<div class="row">
-<div class="col-md-6 col-lg-4">
-<a href="producto2"><img class="foto"  src="img/apple-iphone-x--1.jpg" alt="Iphone X"></a>
-
-<a href="producto2.php"><h2>Iphone X 256 gb</h2></a>
-<p class="index">ARS $85.000</p>
-</div>   
-<div class="col-md-6 col-lg-4">
-<a href="producto5"><img class="foto" src="img/samsung-galaxy-s9-001.jpg" alt="Samsung s9"></a>
-
-<a href="producto5.php"><h2>Samsung S9</h2></a>
-<p class="index">ARS $29.000</p>   
+  </div>
+  </div>
+  </div>
+    <?php endforeach; ?>
 </div>
-<div class="col-md-6 col-lg-4">
-<a href="producto8"><img class="foto" src="img/moto-g6.jpg" alt="Motorola G6"></a>
- 
-<a href="producto8"><h2>Motorola G6</h2></a>
-<p class="index">ARS $16.000</p>
-</div>   
-</div>
-</div>
+<br>
 </section>
 
 @endsection

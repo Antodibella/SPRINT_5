@@ -89,3 +89,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::post('/editar',"productosController@detalleProducto");
 /* Route::post('/editarproducto/{{id}}',"productosController@editarProducto"); */
 
+Route::post('/miperfil','userController@editar')->name('user.editar');
+
+/* Route::post('/editarUsuario',"userController@userUpdate"); */
+Route::get('/index', "productosController@listaProductos" );

@@ -24,7 +24,12 @@ class productosController extends Controller
         $vac = compact("productos");
         return view('administrador', $vac);
     }
-    
+    public function listaProductos(){
+        $productos = producto::orderBy('precio','desc')->paginate(3);
+        // sirve para ver el arrays de productos --> dd($productos);
+        $vac = compact("productos");
+        return view('index', $vac);
+    }
     
     public function detalle($id){
         $producto = producto::find($id);

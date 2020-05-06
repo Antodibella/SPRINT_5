@@ -530,3 +530,11 @@ font-weight: bold;
      background-color: rgb(39, 37, 37);
  }
 
+.registro h1{
+    text-align: center;
+    font-weight: bold;
+}
+.log h1{
+    text-align: center;
+    font-weight: bold;
+}

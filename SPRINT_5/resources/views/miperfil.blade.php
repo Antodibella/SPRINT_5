@@ -34,7 +34,7 @@
             {{--Aca errores --}}
 
             <hr>
-        <form action="miperfil" method="post"> <input type='submit' class="btn btn-secondary" name='salir' value='Salir' /> </form>   
+         
         <br>
 
 <!-- Button trigger modal -->
@@ -53,28 +53,25 @@
         </button>
       </div>
       <div class="modal-body">
-        <form method="POST" action="miperfil" enctype="multipart/form-data">
-     
-            <p>Por favor complete todo los campos</p>
+        <form method="POST" action="{{ route('user.editar')}}" enctype="multipart/form-data">
+          @csrf
+            <p>Por favor complete todos los campos</p>
             
             <label for="name"><b>Nombre:</b></label>
             <br>
-            <input type="text" placeholder="Escriba su Nombre" name="name" value="" required>
+            <input type="text" placeholder="Escriba su Nombre" name="name" value="{{ Auth::user()->name }}" required>
                 <br><br>
                 <label for="surname"><b>Apellido:</b></label>
                 <br>
-            <input type="text" placeholder="Escriba su Apellido" name="surname" value="" required>
+            <input type="text" placeholder="Escriba su Apellido" name="surname" value="{{ Auth::user()->surname }}" required>
                 <br><br>  
                 <label for="psw"><b>Contraseña:</b></label>
                 <br>
             <input type="password" placeholder="Escriba su contraseña" name="password" required>
-                <br><br>
-            <label for="psw"><b>Contraseña:</b></label>
-            <br>
-            <input type="password" placeholder="Confirme su contraseña" name="z" required>
+            
             <br><br>
             <b> Cambiar foto</b><br><br>
-                <input type="file" name="fotoP" value="">
+            <input type="file" class="" name="foto" id="foto"  >
             <br><br>
             <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
             <button type="submit" class="btn btn-primary" name="guardar">Guardar Cambios</button>
