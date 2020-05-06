@@ -480,7 +480,7 @@ font-weight: bold;
     text-align: center;
 }
 .administrador{
-    background-color:#9c9c9c9c;
+    background-color:black !important;
 }
 .administrador .btn-group{
     width: 80%;
@@ -541,4 +541,8 @@ font-weight: bold;
 
 .dropdown-item p{
     color:black;
+}
+.imgprod{
+    height: 40px;
+    width:  40px;
 }

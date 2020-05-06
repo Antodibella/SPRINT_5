@@ -150,7 +150,9 @@
                 <div class="card" style="width: 25rem;">
                 <div class="card-body">
                 <p class="card-title"><a href="producto/<?=$producto['id']?>"></p><p><?=$producto['marca']?> <?=$producto['modelo']?></p></a>
+                  <div class="imgprod">
                 <a href="producto/<?=$producto['id']?>"><img src="/storage/{{$producto->foto}}" alt="logotipo" class="img-fluid" width="300px"></a>
+                </div>
                 <p>ARS <?=$producto['precio']?></p>
                 <a href="#" class="btn btn-dark">Comprar</a>
     
