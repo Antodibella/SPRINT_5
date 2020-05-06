@@ -34,9 +34,15 @@
 </a>
 </div>
 
+<br>
+<br>
+<br>
 
 <!--  los mas vendidos  -->
+<div  class="losmasbuscados">
+<h1 class="buscados"> Celulares destacados <a href="productos">  Ir a la tienda ></a></h1> 
 <div  class="row">
+
     <?php foreach($productos as $producto) : ?>
     
   <div class="col-md-4 col-lg-4">
@@ -51,6 +57,7 @@
   </div>
   </div>
     <?php endforeach; ?>
+</div>
 </div>
 <br>
 </section>

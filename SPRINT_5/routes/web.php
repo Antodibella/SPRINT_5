@@ -39,6 +39,8 @@ Route::get('/index', function () {
    return view ("miperfil");
 });
 
+
+
 Route::get('/producto', function () {
    return view ("Producto");
 });
@@ -93,3 +95,12 @@ Route::post('/miperfil','userController@editar')->name('user.editar');
 
 /* Route::post('/editarUsuario',"userController@userUpdate"); */
 Route::get('/index', "productosController@listaProductos" );
+
+/* Ruta para email */
+
+Route::get('/', function () {
+   return view('ayuda');
+}); //Esta ruta la ponemos en la raiz para que nada mas ejecutar nuestra aplicación aparezca nuestro formulario
+
+Route::post('/ayuda2', 'EmailController@contact')->name('contact');
+//Ruta que esta señalando nuestro formulario

@@ -546,3 +546,18 @@ font-weight: bold;
     height: 40px;
     width:  40px;
 }
+
+
+/* los mas buscados en index */
+
+.buscados {
+   
+    text-align: center;
+    font-size: 30px;
+}
+
+.forayuda {
+   
+    text-align: center;
+    font-size: 30px;
+}
