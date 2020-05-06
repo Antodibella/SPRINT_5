@@ -538,3 +538,7 @@ font-weight: bold;
     text-align: center;
     font-weight: bold;
 }
+
+.dropdown-item p{
+    color:black;
+}
