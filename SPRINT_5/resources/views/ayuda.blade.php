@@ -472,7 +472,7 @@
                 </div>
                
                <div class="text-center">
-              <button type="submit" class="btn btn-dark">  Enviar  </button>
+              <button type="submit" class="btn btn-dark" onclick="alert('¡Su consulta fue enviada con exito, en breve le responderemos!')">  Enviar  </button>
                </div>
             </form> 
             </div>   

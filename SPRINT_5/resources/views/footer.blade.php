@@ -45,14 +45,17 @@
          <h5 class="text-uppercase">REDES SOCIALES</h5>
  
          <ul class="list-unstyled">
+          <li>
+            <a href="http://web.whatsapp.com"><i class="fab fa-whatsapp"></i>  &nbsp;&nbsp;  TecnoMovil</a>
+          </li>
            <li>
-             <a href="/quienessomos">Instagram</a>
+             <a href="http://instagram.com"><i class="fab fa-instagram"></i>  &nbsp;  TecnoMovil_ok</a>
            </li>
            <li>
-             <a href="/register">Facebook</a>
+             <a href="http://facebook.com"><i class="fab fa-facebook-f"></i> &nbsp;&nbsp;  TecnoMovil_ok</a>
            </li>
            <li>
-             <a href="/ayuda">LinkdIn</a>
+             <a href="http://linkedin.com"><i class="fab fa-linkedin"></i>  &nbsp;&nbsp;  LinkdIn</a>
            </li>
          </ul>
  

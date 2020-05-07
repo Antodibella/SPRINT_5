@@ -1,13 +1,14 @@
 
 
 
-@extends('layouts.app')
-
+@extends('layouts.plantilla')
+@section('header_title')
+    Inicia Sesión - TecnoMovil
+@endsection
 @section('content')
 <div class="container">
-    <br><br><br>
-    <div class="row justify-content-center">
-        <div class="col-md-8">
+        <div class="row justify-content-center">
+            <div class="col-md-10">
            <div class="log">
              <h1>Acceder</h1>  
         </div> 
@@ -18,7 +19,7 @@
                     <form method="POST" action="{{ route('login') }}">
                         @csrf
 
-                        <div class="form-group row">
+                        <div class="form-group row col-md-">
                             <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
 
                             <div class="col-md-6">

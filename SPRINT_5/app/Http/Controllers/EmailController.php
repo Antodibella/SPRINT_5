@@ -12,7 +12,7 @@ class EmailController extends Controller
         $subject = "Consulta de mi pagina web";
         $for = "tecnomovil.dh@gmail.com";
         Mail::send('email',$request->all(), function($msj) use($subject,$for){
-            $msj->from("tucorreo@gmail.com","NombreQueApareceráComoEmisor");
+            $msj->from("tecnomovil.dh@gmail.com","TecnoMovil");
             $msj->subject($subject);
             $msj->to($for);
         });
