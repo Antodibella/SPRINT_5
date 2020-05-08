@@ -447,33 +447,33 @@
                     <div class="form-group col-md-7 m-auto">
                         <label for="name"> Nombre</label>
                          <br>
-                        <input type="name" class="form-control" name="name" id="name" value="" placeholder="Nombre">
+                        <input type="name" class="form-control" name="name" id="name" value="" placeholder="Nombre"required>
                          <br>
                     </div>
                     
                     <div class="form-group col-md-7 m-auto">
                         <label for="apellido"> Apellido</label>
                          <br>
-                        <input type="apellido" class="form-control" name="surname" value=""  id="surname" placeholder="Apellido">
+                        <input type="apellido" class="form-control" name="surname" value=""  id="surname" placeholder="Apellido" required>
                          <br>
                     </div>
                     <div class="form-group col-md-7 m-auto">
                         <label for="inputEmail4"> Email</label>
-                        <input type="email" class="form-control" name="email" value=""  id="inputEmail4" placeholder="Email">
+                        <input type="email" class="form-control" name="email" value=""  id="inputEmail4" placeholder="Email"required>
                         <br>
                     </div>
                     <div class="form-group col-md-7 m-auto ">
                             <label for="exampleFormControlTextarea1">Envianos tu consulta</label>
                              <br>
-                            <textarea class="form-control" name="msg" value=""  id="exampleFormControlTextarea1" rows="3" cols="80" placeholder="Escribe tu consulta aqui..."></textarea>
+                            <textarea class="form-control" name="msg" value=""  id="exampleFormControlTextarea1" rows="3" cols="80" placeholder="Escribe tu consulta aqui..."required></textarea>
                           </div>
 
                   <br><br>
                 
                 </div>
-               
+                {{-- onclick="alert('¡Su consulta fue enviada con exito, en breve le responderemos!')" --}}
                <div class="text-center">
-              <button type="submit" class="btn btn-dark" onclick="alert('¡Su consulta fue enviada con exito, en breve le responderemos!')">  Enviar  </button>
+              <button type="submit" class="btn btn-dark">  Enviar  </button>
                </div>
             </form> 
             </div>   
