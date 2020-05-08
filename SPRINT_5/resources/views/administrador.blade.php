@@ -16,15 +16,15 @@
     <br><br><br> 
     
                 
-     {{--            @if($errores ?? ''): 
-                <ul>
-       @foreach ($errores as $error) 
+  @if($errors->any()) 
+    <ul>
+       @foreach ($errors as $error) 
         <li>
           {{error}}
         </li> 
         @endforeach
     </ul>
-  @endif  --}}
+  @endif 
   
    <img class="localadmin" src="/img/local.jpg" alt="" width="100%">
    
@@ -105,8 +105,8 @@
 <div class="modal-content">
 
  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-      <span aria-hidden="true">&times;</span>
-    </button>
+            <span aria-hidden="true">&times;</span>
+          </button>
       <h1>EDITAR PRODUCTOS</h1>
 
   <br>

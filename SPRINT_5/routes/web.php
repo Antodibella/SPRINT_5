@@ -104,3 +104,10 @@ Route::get('/', function () {
 
 Route::post('/ayuda', 'EmailController@contact')->name('contact');
 //Ruta que esta señalando nuestro formulario
+
+
+//carrito
+Route::get('Cart/Show',[
+   'as'=>'Cart-show',
+   'uses'=>'CartController@show'
+]);

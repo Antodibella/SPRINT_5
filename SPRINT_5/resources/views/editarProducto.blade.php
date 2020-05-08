@@ -39,7 +39,7 @@
         </div>
         <div class="form-group col-md-7 m-auto ">
           <label for="exampleFormControlTextarea1">Caracteristicas</label>
-          <textarea class="form-control" name="caracteristicas" value="{{$producto['caracteristicas']}}"  id="exampleFormControlTextarea1" rows="3" cols="80"></textarea>
+        <textarea class="form-control" name="caracteristicas" aria-valuetext="{{$producto['caracteristicas']}}" id="exampleFormControlTextarea1" rows="3" cols="80"></textarea>
         </div>
         <div class="form-group col-md-7 m-auto">
           <label for="precio"> Precio:</label>

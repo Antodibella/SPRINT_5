@@ -9,18 +9,19 @@
 
 
 
-{{-- <div class="errores">
-    @if(count($errores)) :    
-                        <img src="img/atencion.png" alt="">      
-                        <br><br>        
-                        <h1>NO SE PUDO ENVIAR SU CONSULTA, REVISE:</h1><br>
-                        <ul>
-                        @foreach($errores->All() as $error)
-                        <li><strong>{{$error}}}</strong></li>
-                        @endforeach
-                        </ul>
-                    @endif
-    </div> --}}
+<div class="errores">
+    @if($errors->any())  
+     <div class="alert alert-danger">      
+      <br><br>        
+      <h1>NO SE PUDO ENVIAR SU CONSULTA, REVISE:</h1><br>
+      <ul>
+        @foreach($errors->All() as $error)
+          <li><strong>{{$error}}}</strong></li>
+        @endforeach
+      </ul> 
+    @endif
+    </div>
+</div> 
 
 
 
