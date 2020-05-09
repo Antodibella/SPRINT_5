@@ -211,14 +211,19 @@
   </thead>
   <tbody>
     <tr>
-      <th scope="row">1</th>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
+
+      <?php foreach($productos as $producto) : ?>
+      <br>
+      <th scope="row"><?=$producto['id']?></th>
+      <td><?=$producto['marca']?></td>
+      <td><?=$producto['modelo']?></td>
+      <td><?=$producto['foto']?></td>
+      <td><?=$producto['stock']?></td>
+      <td><?=$producto['precio']?></td>
       <td><div class="btn-group" role="group">
-    <button id="btnGroupDrop1" type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <br>
+        
+        <button id="btnGroupDrop1" type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
       Acciones
     </button>
     <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
@@ -227,7 +232,7 @@
     </div>
   </div>
 </div></td>
-  
+  <?php endforeach; ?>
     </tr>
     
   </tbody>
