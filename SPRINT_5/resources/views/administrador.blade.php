@@ -85,52 +85,23 @@
 
 
 <br>
-<br>
+
 
 <section class="administrador">
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <h1>Administrador / Productos</h1>
 <br>
-<br>
+
 <div class="botonagregarproductos">
         
         <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#agregar">+ Agregar producto</button>
       </div>  
 
         {{-- AGREGAR PRODUCTO --}}
-  
 
-  
-  
   <div class="modal fade bd-example-modal-xl" tabindex="-1" role="dialog" aria-labelledby="myExtraLargeModalLabel" aria-hidden="true" id="agregar">
    
-
 
 <div class="modal-dialog modal-xl">
         
@@ -236,7 +207,7 @@
   </div>
 </div></td>
     </tr>
-    <hr>
+    
   <?php endforeach; ?>
     
   </tbody>
