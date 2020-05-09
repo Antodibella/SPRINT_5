@@ -474,18 +474,33 @@ font-weight: bold;
 }
 /* ADMINISTRADOR */
 .administrador h1{
-    text-align: center;
+    margin-left: 30px;
 }
 .administrador p{
     text-align: center;
 }
 .administrador{
-    background-color:black !important;
+    background-color: white !important;
 }
 .administrador .btn-group{
     width: 80%;
     margin-left: 10%;
     margin-right: 10%;
+}
+
+.botonagregarproductos  {
+    text-align: right;
+    margin-right: 50px;
+    margin-bottom: 50px;
+    
+    
+}
+
+.table{
+   
+   padding: 50px;
+   
+    
 }
 
 /* Footer */
@@ -562,3 +577,18 @@ font-weight: bold;
     font-size: 30px;
 }
 
+.logoadm {
+
+    margin-left: 50px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    width: 200px;
+}
+
+.barradeinicio1 {
+    text-align: center;
+    margin-left: 300px;
+    font-size: 20px;
+   
+    
+}
