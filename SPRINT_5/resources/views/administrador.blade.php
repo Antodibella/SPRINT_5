@@ -217,8 +217,9 @@
       <th scope="row"><?=$producto['id']?></th>
       <td><?=$producto['marca']?></td>
       <td><?=$producto['modelo']?></td>
-      <td><?=$producto['foto']?></td>
-      <td><?=$producto['stock']?></td>
+      <td>            <img src="/storage/{{$producto->foto}}" alt="logotipo" class="d-block" alt="1">
+      </td>
+      <td><?=$producto['caracteristicas']?></td>
       <td><?=$producto['precio']?></td>
       <td><div class="btn-group" role="group">
         <br>
@@ -230,10 +231,13 @@
       <a class="dropdown-item" data-toggle="modal" data-target="#editar">Editar Producto</a>
       <a class="dropdown-item" data-toggle="modal" data-target="#borrar">Borrar Porducto</a>
     </div>
+
+    
   </div>
 </div></td>
-  <?php endforeach; ?>
     </tr>
+    <hr>
+  <?php endforeach; ?>
     
   </tbody>
   

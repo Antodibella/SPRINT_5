@@ -588,7 +588,14 @@ font-weight: bold;
 .barradeinicio1 {
     text-align: center;
     margin-left: 300px;
-    font-size: 20px;
-   
-    
+    font-size: 20px;   
+}
+.d-block{
+height: 10%;
+width: 30%;
+}
+.table{
+    margin-left: 0%;
+    margin-right: 0%;
+    width: 90%;
 }
