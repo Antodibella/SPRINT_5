@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 
 use App\producto;
 
+
 class productosController extends Controller
 {
     public function listado(){
@@ -38,9 +39,8 @@ class productosController extends Controller
 
     }
 
-    public function detalleProducto(Request $req){
-        $id = $req['id'];
-        $producto = producto::find($id);
+    public function detalleProducto(producto $producto){
+           
         $vac = compact("producto");
         return view("editarproducto", $vac);
 
@@ -83,7 +83,7 @@ class productosController extends Controller
         $ruta = $req-> file("foto")-> store("public");
         $nombreArchivo = basename($ruta);
         //if para si esta vacio agregue null base de dato
-        if(file("foto1")){
+        if($req->file("foto1")){
         $ruta1 = $req-> file("foto1")-> store("public");
         $nombreArchivo1 = basename($ruta1);
         }
@@ -114,13 +114,15 @@ class productosController extends Controller
     }
 
     public function editar(producto $producto){
+        dd($producto);
         //convertir foto si la edito y guardarla
-        $ruta = $producto-> file("foto")-> store("public");
+        $ruta=$producto->file("foto")->store("public");
         $nombreArchivo = basename($ruta);
-        $ruta1 = $producto-> file("foto1")-> store("public");
-        $nombreArchivo1 = basename($ruta1);
-        $ruta2 = $producto-> file("foto2")-> store("public");
-        $nombreArchivo2 = basename($ruta2);
+        $ruta1=$producto->file("foto1")->store("public");
+        $nombreArchivo1=basename($ruta1);
+        $ruta2=$producto->file("foto2")->store("public");
+        $nombreArchivo2=basename($ruta2);
+        
         
         $producto->update([
             'marca'=> $producto["marca"],
@@ -134,10 +136,8 @@ class productosController extends Controller
         ]);
     }
 
-    public function borrar(Request $req)
+    public function borrar(producto $producto)
     {
-        $id = $req['borrar'];
-        $producto = Producto::find($id);
         $producto->delete();
         return redirect("/administrador");  
     }

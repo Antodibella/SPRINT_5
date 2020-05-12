@@ -7,8 +7,9 @@
 
 
 <section>
-    <form class="editarProducto" action="{{ route('productos.editar')}}" method="post" enctype="multipart/form-data">  
+    <form class="editarProducto" action="{{ route('productos.editar',$producto)}}" method="post" enctype="multipart/form-data">  
         @csrf
+        @method('put') 
         <input type="hidden" name="submitted" id="submitted" value="1">
         <div class="form-row">
           <div class="form-group col-md-7 m-auto">
@@ -39,7 +40,9 @@
         </div>
         <div class="form-group col-md-7 m-auto ">
           <label for="exampleFormControlTextarea1">Caracteristicas</label>
-        <textarea class="form-control" name="caracteristicas" aria-valuetext="{{$producto['caracteristicas']}}" id="exampleFormControlTextarea1" rows="3" cols="80"></textarea>
+        <textarea class="form-control" name="caracteristicas"  id="exampleFormControlTextarea1" rows="3" cols="80">
+          {{$producto['caracteristicas']}}
+        </textarea>
         </div>
         <div class="form-group col-md-7 m-auto">
           <label for="precio"> Precio:</label>

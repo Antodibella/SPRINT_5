@@ -80,15 +80,15 @@ Route::get('/administrador', "productosController@listaPro" );
 
 Route::post('/administrador', 'productosController@store')->name('productos.store');
 
-Route::post('/borrarProducto','productosController@borrar')->name('productos.borrar');
+Route::delete('/borrarProducto','productosController@borrar')->name('productos.borrar');
 
-Route::post('/posteditar','productosController@editar')->name('productos.editar');
+Route::put('/posteditar/{producto}','productosController@editar')->name('productos.editar');
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home'); 
 
-Route::post('/editar',"productosController@detalleProducto");
+Route::get('/editar/{producto}',"productosController@detalleProducto")->name('editarProducto');
 /* Route::post('/editarproducto/{{id}}',"productosController@editarProducto"); */
 
 Route::post('/miperfil','userController@editar')->name('user.editar');

@@ -192,20 +192,16 @@
       </td>
       <td><?=$producto['caracteristicas']?></td>
       <td><?=$producto['precio']?></td>
-      <td><div class="btn-group" role="group">
-        <br>
-        
-        <button id="btnGroupDrop1" type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-      Acciones
-    </button>
-    <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
-      <a class="dropdown-item" data-toggle="modal" data-target="#editar">Editar Producto</a>
-      <a class="dropdown-item" data-toggle="modal" data-target="#borrar">Borrar Porducto</a>
-    </div>
-
+      <td>
     
-  </div>
-</div></td>
+      <a href="{{route("editarProducto",$producto['id'])}}">Editar Producto</a>
+      <form action="{{route("productos.borrar",$producto['id']) }}" method="post">
+        <input class="btn btn-default" type="submit" value="Delete" />
+        @method('delete')
+        @csrf
+    </form>
+    
+    </td>
     </tr>
     
   <?php endforeach; ?>

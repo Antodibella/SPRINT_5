@@ -57,6 +57,26 @@ $sHTML .= '<br>------------------<br>Precio total: ' . $fPrecioTotal;
   <hr>
   
     
+<table class="table">
+
+	<thead>
+	  <tr>
+		<th scope="col">Numero</th>
+		<th scope="col">Marca</th>
+		<th scope="col">Modelo</th>
+		<th scope="col">Foto</th>
+		<th scope="col">Caracteristicas</th>
+		<th scope="col">Precio</th>
+		<th scope="col">Acciones</th>
+	  </tr>
+	</thead>
+	<tbody>
+	  <tr>
+	  </tr>
+	  
+	</tbody>
+	
+  </table>
 	
   
 </div>
