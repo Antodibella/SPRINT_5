@@ -54,7 +54,7 @@
          </div>
         <br><br><br>
         </div>
-        <button type="submit" name="submit" class="boton1">GUARDAR</button>
+        <button type="submit" name="submit" class="btn btn-dark">GUARDAR</button>
         </form>
 </section>
 

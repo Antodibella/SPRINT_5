@@ -558,9 +558,12 @@ font-weight: bold;
     color:black;
 }
 .imgprod{
-    height: 40px;
-    width:  40px;
+    height: 50%;
+    width:  50%;
+    margin-left: 25%;
+    margin-right: 25%;
 }
+
 
 
 /* los mas buscados en index */
