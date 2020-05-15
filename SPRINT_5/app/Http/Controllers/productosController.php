@@ -20,7 +20,7 @@ class productosController extends Controller
     public function listaPro(){
 
        
-        $productos = producto::All();
+        $productos = producto::paginate(10);
         // sirve para ver el arrays de productos --> dd($productos);
         $vac = compact("productos");
         return view('administrador', $vac);
@@ -107,31 +107,60 @@ class productosController extends Controller
         return redirect("/administrador"); 
     }
 
-    public function editar(producto $producto){
-        dd($producto);
-        //convertir foto si la edito y guardarla
-        $ruta=$producto->file("foto")->store("public");
-        $nombreArchivo = basename($ruta);
-        $ruta1=$producto->file("foto1")->store("public");
+    public function editar(Request $req){
+        
+        $reglas=[
+            "marca"=> "required | string | min:2",
+            "modelo"=> "required | string | min:2",
+            "caracteristicas"=> "required | string |max:255",
+            "precio"=> "required | numeric ",
+            "stock"=> "required | integer ",
+            "foto" => "file",
+            "foto1"=> "nullable",
+            "foto2"=>"nullable"
+            
+    
+            ];
+        $mensajes=[
+            "required"=> "No completaste el campo :attribute",
+            "string"=> "El campo :attribute debe ser un texto",
+            "min"=> "El campo :attribute tiene un minimo de :min",
+            "integer"=> "El campo :attribute no es un numero entero",
+            "numeric"=> "El campo :attribute no es correcto",
+            "max"=> " El campo :attribute tiene un maximo de :max",
+            "file"=> "El campo :atribute no es una foto"
+            ];
+        $this->validate($req, $reglas, $mensajes);
+        $nombreArchivo1="";
+        $nombreArchivo2="";
+        /// agregar foto y obtner el nombre
+        $ruta=$req->file("foto")->store("public");
+        $nombreArchivo=basename($ruta);
+        //if para si esta vacio agregue null base de dato
+        if($req->file("foto1")){
+        $ruta1=$req->file("foto1")->store("public");
         $nombreArchivo1=basename($ruta1);
-        $ruta2=$producto->file("foto2")->store("public");
+        }
+        if($req->file("foto2")){
+        $ruta2=$req->file("foto2")-> store("public");
         $nombreArchivo2=basename($ruta2);
-        
-        
-        $producto->update([
-            'marca'=> $producto["marca"],
-            'foto'=>$nombreArchivo ,
-            'foto1'=>$nombreArchivo1 ,
-            'foto2'=>$nombreArchivo2 ,
-            'modelo' => $producto["modelo"],
-            'caracteristicas'=> $producto["caracteristicas"],
-            'precio' => $producto["precio"],
-            'stock' => $producto["stock"],
+        } 
+
+            producto::update([
+            $producto['marca']=> $req["marca"],
+            $producto['foto']=>$nombreArchivo ,
+            $producto['foto1']=>$nombreArchivo1 ,
+            $producto['foto2']=>$nombreArchivo2 ,
+            $producto['modelo'] => $req["modelo"],
+            $producto['caracteristicas']=> $req["caracteristicas"],
+            $producto['precio'] => $req["precio"],
+            $producto['stock'] => $req["stock"],
         ]);
     }
 
     public function borrar(producto $producto)
-    {
+    {   $id = $producto['id'];
+        $producto = producto::find($id);
         $producto->delete();
         return redirect("/administrador");  
     }

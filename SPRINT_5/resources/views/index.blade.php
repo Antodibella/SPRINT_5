@@ -5,7 +5,7 @@
 @section('content')
     
 <!--  Banner  -->
-<section>
+<section class="index">
 
 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
 <ol class="carousel-indicators">
@@ -48,9 +48,9 @@
   <div class="col-md-4 col-lg-4">
         <div class="card" style="width: 25rem;">
         <div class="card-body">
-        <p class="card-title"><a href="producto/<?=$producto['id']?>"></p><p><?=$producto['marca']?> <?=$producto['modelo']?></p></a>
+        <h3 class="card-title"><a href="producto/<?=$producto['id']?>"></h3><h3><?=$producto['marca']?> <?=$producto['modelo']?></h3></a>
         <a href="producto/<?=$producto['id']?>"><img src="/storage/{{$producto->foto}}" alt="logotipo" class="img-fluid" width="300px"></a>
-        <p>ARS <?=$producto['precio']?></p>
+        <h4>ARS <?=$producto['precio']?></h4>
         <a href="#" class="btn btn-dark">Comprar</a>
 
   </div>

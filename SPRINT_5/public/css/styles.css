@@ -475,6 +475,7 @@ font-weight: bold;
 /* ADMINISTRADOR */
 .administrador h1{
     margin-left: 30px;
+    text-align:center;
 }
 .administrador p{
     text-align: center;
@@ -482,10 +483,28 @@ font-weight: bold;
 .administrador{
     background-color: white !important;
 }
+.administrador .boton{
+    margin-left: 45%;
+    margin-right: 45%;
+    height: 10%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+
+}
+.administrador .bot{
+    margin-top: 5px;
+    margin-bottom: 5px;
+
+}
 .administrador .btn-group{
     width: 80%;
     margin-left: 10%;
     margin-right: 10%;
+}
+.administrador .center{
+    margin-left: 45%;
+    margin-right: 45%;
+    width: 10%; 
 }
 
 .botonagregarproductos  {
@@ -498,9 +517,7 @@ font-weight: bold;
 
 .table{
    
-   padding: 50px;
-   
-    
+   padding: 10px; 
 }
 
 /* Footer */
@@ -567,7 +584,14 @@ font-weight: bold;
 
 
 /* los mas buscados en index */
-
+.index h3{
+    text-align: center;
+    color: black !important;
+}
+.index h4{
+    text-align: center;
+    color: black;
+}
 .buscados {
    
     text-align: center;
@@ -597,8 +621,4 @@ font-weight: bold;
 height: 10%;
 width: 30%;
 }
-.table{
-    margin-left: %;
-    margin-right: 5%;
-    width: 90%;
-}
+

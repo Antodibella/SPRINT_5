@@ -6,12 +6,19 @@
     
 
 
-<section>
+<section class="administrador">
+  <h1>EDITAR PRODUCTOS</h1>
+<p>Por favor complete todo los campos</p>
+<br>
     <form class="editarProducto" action="{{ route('productos.editar',$producto)}}" method="post" enctype="multipart/form-data">  
         @csrf
         @method('put') 
         <input type="hidden" name="submitted" id="submitted" value="1">
         <div class="form-row">
+          <div class="form-group col-md-7 m-auto">
+            <label for="modelo"> Modelo:</label>
+            <input type="modelo" class="form-control" name="modelo" value="{{$producto['modelo']}}"  id="modelo" >
+          </div>
           <div class="form-group col-md-7 m-auto">
           <label for="marca"> Marca:</label>
           <input type="name" class="form-control" name="marca" id="marca" value="{{$producto['marca']}}" placeholder="Marca">
@@ -19,25 +26,28 @@
         <div class="form-group col-md-7 m-auto">
           <label for="foto"> Imagen:</label>
           <br>
+          <img src="/storage/{{$producto->foto}}" alt="logotipo" class="img-fluid" width="70px">
+          
           <input type="file" class="" name="foto" id="foto" value="{{$producto['foto']}}"  >
         </div>
         <br><br>
         <div class="form-group col-md-7 m-auto">
           <label for="foto1"> Imagen:</label>
           <br>
+          <img src="/storage/{{$producto->foto1}}" alt="logotipo" class="img-fluid" width="70px">
           <input type="file" class="" name="foto1" id="foto1" value="{{$producto['foto1']}}" >
         </div>
         <br><br>
         <div class="form-group col-md-7 m-auto">
           <label for="foto2"> Imagen:</label>
           <br>
+          <img src="/storage/{{$producto->foto}}" alt="logotipo" class="img-fluid" width="70px">
+          
+         
           <input type="file" class="" name="foto2" id="foto2" value="{{$producto['foto2']}}" >
         </div>
-        <br><br>
-        <div class="form-group col-md-7 m-auto">
-          <label for="modelo"> Modelo:</label>
-          <input type="modelo" class="form-control" name="modelo" value="{{$producto['modelo']}}"  id="modelo" >
-        </div>
+        <br><br><br>
+        
         <div class="form-group col-md-7 m-auto ">
           <label for="exampleFormControlTextarea1">Caracteristicas</label>
         <textarea class="form-control" name="caracteristicas"  id="exampleFormControlTextarea1" rows="3" cols="80">
@@ -54,7 +64,10 @@
          </div>
         <br><br><br>
         </div>
-        <button type="submit" name="submit" class="btn btn-dark">GUARDAR</button>
+        <div class="boton">
+          <button type="submit" name="submit" class="btn btn-dark">GUARDAR</button>
+        </div>
+        
         </form>
 </section>
 

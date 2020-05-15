@@ -111,3 +111,7 @@ Route::get('Cart/Show',[
    'as'=>'Cart-show',
    'uses'=>'CartController@show'
 ]);
+
+Route::get('/agregarproducto', function () {
+   return view ("agregarProductos");
+});
