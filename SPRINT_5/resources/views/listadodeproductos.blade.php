@@ -165,8 +165,8 @@
             <?php endforeach; ?>
    </div>
 </div>
-        
-        <div class="center">
+  <br>     
+<div class="center">
     {{$productos->links()}}
 </div>
 </div>
