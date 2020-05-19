@@ -622,3 +622,113 @@ height: 10%;
 width: 30%;
 }
 
+
+/* listado de productos */
+
+.card{
+    margin: 30px;
+}
+
+.seccionproductos {
+    width: 100%;
+    margin: 0px;
+}
+
+.rowproductos{
+    padding: 15px;
+    margin: 15px;
+}
+.row {
+    padding: 15px 15px 15px 15px;
+    margin: 15px 15px 15px 15px;;
+}
+.containerproductos {
+     padding-left: 0px;
+     padding-top: 30px;
+}
+
+ .todoslosproductos .productosx3{
+
+    padding-left: 30px;
+    padding-right: 30px;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.productosx3 {
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+div .filtrarportodo {
+    padding-top: 50px;
+    margin-left: 100px;
+}
+
+.filtrarportodo{
+	margin-bottom: 30px;
+}
+
+.filtrarportodo h4 {
+	color: #1c1c1c;
+	font-weight: 700;
+	margin-bottom: 25px;
+}
+
+.filtrarportodo ul li {
+	list-style: none;
+}
+
+.filtrarpor ul li a {
+	font-size: 16px;
+	color: #666666;
+	line-height: 48px;
+	-webkit-transition: all, 0.3s;
+	-moz-transition: all, 0.3s;
+	-ms-transition: all, 0.3s;
+	-o-transition: all, 0.3s;
+	transition: all, 0.3s;
+}
+
+.filtrarpor ul li a:hover {
+	color: #7fad39;
+}
+
+.filtrarporbuscar {
+	margin-bottom: 30px;
+}
+
+.filtrarporbuscar form {
+	position: relative;
+}
+
+.filtrarporbuscar form input {
+	width: 100%;
+	height: 46px;
+	font-size: 16px;
+	color: #6f6f6f;
+	padding-left: 15px;
+	border: 1px solid #e1e1e1;
+	border-radius: 20px;
+}
+
+.filtrarporbuscar form input::placeholder {
+	color: #6f6f6f;
+}
+
+.filtrarporbuscar form button {
+	font-size: 16px;
+	color: #6f6f6f;
+	background: transparent;
+	border: none;
+	position: absolute;
+	right: 0;
+	top: 0;
+	height: 100%;
+	padding: 0px 0px;
+}
+
+
+
