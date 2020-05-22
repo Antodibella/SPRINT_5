@@ -28,14 +28,8 @@
     <li class="nav-item active">
     <a class="nav-link" href="/index">Inicio <span class="sr-only"></span></a>
     </li>
-    <li class="nav-item dropdown">
-    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Catalogo</a>
-    <div class="dropdown-menu">
-      <a class="dropdown-item" href="#">Productos</a>
-      <a class="dropdown-item" href="#">Alertas de stock</a>
-  </li>
     <li class="nav-item active">
-    <a class="nav-link" href="/productos">Pedidos <span class="sr-only"></span></a>
+    <a class="nav-link" href="/productos">Productos<span class="sr-only"></span></a>
     </li>
    
     
@@ -105,6 +99,9 @@
         @endforeach
     </ul>
   @endif 
+  <div class='tablet'>
+
+  
 <table class="table">
 
   <thead>
@@ -156,6 +153,7 @@
   
 </table>
 <hr>  
+</div>
 <br>
 <div class="center">
   {{$productos->links()}}

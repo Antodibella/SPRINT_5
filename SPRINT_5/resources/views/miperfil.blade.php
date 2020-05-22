@@ -5,7 +5,8 @@
 @endsection
 @section('content')
     
-  
+
+      
     <section class="miperfil">
        
 

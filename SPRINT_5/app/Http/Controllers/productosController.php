@@ -147,19 +147,19 @@ class productosController extends Controller
         } 
 
             producto::update([
-            $producto['marca']=> $req["marca"],
-            $producto['foto']=>$nombreArchivo ,
-            $producto['foto1']=>$nombreArchivo1 ,
-            $producto['foto2']=>$nombreArchivo2 ,
-            $producto['modelo'] => $req["modelo"],
-            $producto['caracteristicas']=> $req["caracteristicas"],
-            $producto['precio'] => $req["precio"],
-            $producto['stock'] => $req["stock"],
+            'marca'=> $req["marca"],
+            'foto'=>$nombreArchivo ,
+            'foto1'=>$nombreArchivo1 ,
+            'foto2'=>$nombreArchivo2 ,
+            'modelo' => $req["modelo"],
+            'caracteristicas'=> $req["caracteristicas"],
+            'precio' => $req["precio"],
+            'stock' => $req["stock"],
         ]);
     }
 
-    public function borrar(producto $producto)
-    {   $id = $producto['id'];
+    public function borrar(producto $producto){
+        $id = $producto['id'];
         $producto = producto::find($id);
         $producto->delete();
         return redirect("/administrador");  
