@@ -52,7 +52,7 @@
                         
 
                         <li>
-                            <a class="fas fa-shopping-cart black"  href= "/carrito" ></a>
+                            <a class="fas fa-shopping-cart black"  href= "/cart" ></a>
                             </li>
                             
     <li class="nav-item dropdown">

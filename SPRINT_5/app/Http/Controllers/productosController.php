@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\producto;
-
+use App\Cart;
 
 class productosController extends Controller
 {
@@ -32,6 +32,22 @@ class productosController extends Controller
         return view('index', $vac);
     }
     
+    public function agregarCarrito(producto $producto){
+      
+        Cart::create([
+            'producto_id'=>$producto->id,
+            'user_id'=>auth()->id(),
+            'nombre'=> $producto->modelo,
+            'precio'=> $producto->precio,
+            'cantidad'=>1
+        ]);
+        return back();
+
+        // $producto = producto::find($id);
+        // $vac = compact("producto");
+        // return view("cart", $vac);
+    }
+
     public function detalle($id){
         $producto = producto::find($id);
         $vac = compact("producto");

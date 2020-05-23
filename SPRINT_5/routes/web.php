@@ -27,9 +27,11 @@ Route::get('/index', function () {
     return view ("ayuda");
  });
 
- Route::get('/carrito', function () {
-    return view ("carrito");
- });
+ Route::get('/cart',  'CartController@index');
+ Route::delete('/cart/{item}/borrar', function(\App\Cart $item){
+   $item->delete();
+   return back();
+ })->name('cart.destroy');
 
  Route::get('/login', function () {
     return view ("login");
@@ -49,20 +51,18 @@ Route::get('/quienessomos', function () {
    return view ("quienessomos");
 });
 
-Route::get('/productos', function () {
-   return view ("listadodeproductos");
-});
 
 Route::get('/productos', "productosController@listado" );
 
 //Route::get('/productos/{id}', "productosController@detalle");
+Route::get('/productos/{producto}/agregar-producto', "productosController@agregarCarrito" )->name('agregar-al-carrito')->middleware('auth');
 
 Route::get('/producto/{id}', function ($id) {
    $vac = compact("id"); 
    return view ("detalleproducto", $vac);
 });
 
-Route::get('/producto/{id}', "productosController@detalle" );
+Route::get('/producto/{id}', "productosController@detalle" )->name('productos.show');
 
 // Route::get('/productos/iphone', "productosController@iphone" );
 
