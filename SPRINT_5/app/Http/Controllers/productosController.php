@@ -147,7 +147,7 @@ class productosController extends Controller
             "file"=> "El campo :atribute no es una foto"
             ];
         $this->validate($req, $reglas, $mensajes);
-        
+        dd($req);
         /// agregar foto y obtner el nombre
         $ruta=$req->file("foto")->store("public");
         $nombreArchivo=basename($ruta);
@@ -162,14 +162,14 @@ class productosController extends Controller
         } 
 
             producto::update([
-            'marca'=> $req["marca"],
-            'foto'=>$nombreArchivo ,
-            'foto1'=>$nombreArchivo1 ,
-            'foto2'=>$nombreArchivo2 ,
-            'modelo' => $req["modelo"],
-            'caracteristicas'=> $req["caracteristicas"],
-            'precio' => $req["precio"],
-            'stock' => $req["stock"],
+                'marca'=> request()->marca,
+                'foto'=>$nombreArchivo ,
+                'foto1'=>$nombreArchivo1 ,
+                'foto2'=>$nombreArchivo2 ,
+                'modelo' => request()->modelo,
+                'caracteristicas'=> request()->caracteristicas,
+                'precio' => request()->precio,
+                'stock' => request()->stock
         ]);
     }
 
