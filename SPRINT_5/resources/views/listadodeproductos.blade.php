@@ -154,9 +154,9 @@
                 <a href="producto/<?=$producto['id']?>"><img src="/storage/{{$producto->foto}}" alt="logotipo" class="img-fluid" width="300px"></a>
                 </div>
                 <p>ARS <?=$producto['precio']?></p>
-                <button class="btn btn-dark">
-                <a href="producto/<?=$producto['id']?>">Comprar</a>
-                </button>
+                
+                <a href="producto/<?=$producto['id']?>"><button class="btn btn-dark">Comprar </button></a>
+               
                 
     
           </div>
