@@ -80,7 +80,7 @@ Route::get('/administrador', "productosController@listaPro" );
 
 Route::post('/administrador', 'productosController@store')->name('productos.store');
 
-Route::delete('/borrarProducto','productosController@borrar')->name('productos.borrar');
+Route::delete('/borrarProducto/{id}','productosController@borrar')->name('productos.borrar');
 
 Route::put('/posteditar/{producto}','productosController@editar')->name('productos.editar');
 

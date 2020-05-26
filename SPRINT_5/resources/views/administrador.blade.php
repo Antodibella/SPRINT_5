@@ -132,14 +132,12 @@
        <a href="{{route("editarProducto",$producto['id'])}}"><button class="btn btn-dark">Editar</button></a>
     </div>
      
-      <form action="{{route("productos.borrar",$producto['id']) }}" method="post">
+      <form action="{{url("/borrarProducto/$producto->id") }}" method="POST">
        <div class="bot">
-        <input class="btn btn-dark" type="submit" value="Borrar" />
-       </div>
-        
-       
         @method('delete')
         @csrf
+        <button class="btn btn-dark" type="submit" onclick="return confirm('¿Desea borrar el producto?')" >Borrar</button>
+       </div>  
     </form>
     
     
