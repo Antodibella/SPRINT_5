@@ -10,6 +10,14 @@
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
     <div class="navbar-nav ml-auto">
     <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+    {{-- ($Auth->users()->isAdmin(1)){
+        <li class="nav-item active">
+            <a class="nav-link" href="/administrador">Administrador <span class="sr-only"></span></a>
+        </li>
+    } --}}
+        
+    
+
     <li class="nav-item active">
     <a class="nav-link" href="/index">Inicio <span class="sr-only"></span></a>
     </li>

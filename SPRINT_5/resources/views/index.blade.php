@@ -43,7 +43,7 @@
 <h1 class="buscados"> Celulares destacados <a href="productos">  Ir a la tienda ></a></h1> 
 <div  class="row">
 
-    <?php foreach($productos as $producto) : ?>
+    <?php foreach($productos ?? '' as $producto) : ?>
     
   <div class="col-md-4 col-lg-4">
         <div class="card" style="width: 25rem;">

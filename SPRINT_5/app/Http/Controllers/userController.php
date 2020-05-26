@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use App\user;
 class user extends Controller
 {
     public function editar(user $usuario){
