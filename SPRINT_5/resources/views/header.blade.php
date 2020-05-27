@@ -18,7 +18,8 @@
         
     
 
-    <li class="nav-item active">
+    <li class="
+    ">
     <a class="nav-link" href="/index">Inicio <span class="sr-only"></span></a>
     </li>
     <li class="nav-item active">

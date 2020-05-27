@@ -32,7 +32,7 @@
 <br>
 <div class="preguntasfrecuentes">
 
-<div class="row">
+<div id="rowayuda"  class="row">
 <div class="col-md-4">
 <ul>
 <hr>

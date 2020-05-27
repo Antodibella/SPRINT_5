@@ -428,6 +428,10 @@ font-weight: bold;
     text-align: center !important;
 }
 
+.card-body {
+    padding: 2%;
+}
+
 /* PRODUCTOS */
 
 .row-description {
@@ -621,9 +625,30 @@ font-weight: bold;
 height: 10%;
 width: 30%;
 }
+.rowindex{
+    margin: 15px;
+}
 
+div .card{
+   
+}
 
 /* listado de productos */
+
+#rowproductos{
+    text-align: center;
+  
+    
+}
+
+#descuentos{
+    text-align: center;
+}
+
+.accordion{
+    text-align: center;
+}
+
 
 .card{
     margin: 30px;
@@ -738,3 +763,12 @@ div .filtrarportodo {
 
 
 
+
+@media (max-width: 7686px) {
+    
+}
+
+   #rowayuda {
+       margin-left: 5%;
+       margin-right: 5%;
+   }

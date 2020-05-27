@@ -131,19 +131,67 @@
 </div>
 </div>
 </div>
-  <a class="nav-item nav-link active" href="#">Descuentos</a>
-  <a class="nav-item nav-link active" href="#">Formas de entregas</a>
+  <a class="nav-item nav-link active" href="#" data-toggle="modal" data-target="#descuentos" >Descuentos</a>
+  <div class="modal fade bd-example-modal-xl" tabindex="-1" role="dialog" aria-labelledby="myExtraLargeModalLabel" aria-hidden="true" id="descuentos">
+<div class="modal-dialog modal-xl">
+<div class="modal-content">
+        <div class="modal-body">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+          <div class="accordion" id="accordionExample">
+<img id="descuentos" src="img/DESCUENTOs.png" alt="descuentos" width="40%" >
+          <h3>¡ATENCION! </h3>
+          <h4>¡Todos los descuentos en un solo lugar!</h4>
+<h4>Cupones, códigos promocionales y ofertas para todas las tiendas y marcas en Argentina.</h4>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+  <a class="nav-item nav-link active" href="#" data-toggle="modal" data-target="#formasdeentrega">Formas de entregas</a>
+  <div class="modal fade bd-example-modal-xl" tabindex="-1" role="dialog" aria-labelledby="myExtraLargeModalLabel" aria-hidden="true" id="formasdeentrega">
+<div class="modal-dialog modal-xl">
+<div class="modal-content">
+        <div class="modal-body">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+          <div class="accordion" >
+<h4>Formas de entregas</h4>
+<hr>
+<i class="fas fa-warehouse"> Retirarlo por el local.</i>
+   <BR>
+          
+          <i class="fas fa-truck"> Te lo llevamos a tu domicilio</i>
+       
+
+          
+
+
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
 </nav>
 
 
     <!--  SECCION  -->
     <section class="productos">
 
-<div class="col-lg-12 col-md-5">
+<div id="rowproductos" class="col-lg-12 col-md-5">
 
 
         <br><br>
-        <div  class="row">
+        <div  id="rowproductos" class="row">
             <?php foreach($productos as $producto) : ?>
             
           <div class="col-md-4 col-lg-4">

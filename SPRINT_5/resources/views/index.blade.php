@@ -40,17 +40,19 @@
 
 <!--  los mas vendidos  -->
 <div  class="losmasbuscados">
-<h1 class="buscados"> Celulares destacados <a href="productos">  Ir a la tienda ></a></h1> 
+<h2 class="buscados"> Celulares destacados <a href="productos">  Ir a la tienda ></a></h2> 
+
+
 <div  class="row">
 
     <?php foreach($productos ?? '' as $producto) : ?>
     
-  <div class="col-md-4 col-lg-4">
+  <div class="col-md-12 col-lg-4">
         <div class="card" style="width: 25rem;">
         <div class="card-body">
-        <h3 class="card-title"><a href="producto/<?=$producto['id']?>"></h3><h3><?=$producto['marca']?> <?=$producto['modelo']?></h3></a>
+        <h3 class="card-title"><a href="producto/<?=$producto['id']?>"></h4><h4><?=$producto['marca']?> <?=$producto['modelo']?></h4></a>
         <a href="producto/<?=$producto['id']?>"><img src="/storage/{{$producto->foto}}" alt="logotipo" class="img-fluid" width="300px"></a>
-        <h4>ARS <?=$producto['precio']?></h4>
+        <h5>ARS <?=$producto['precio']?></h5>
         <a href="#" class="btn btn-dark">Comprar</a>
 
   </div>
