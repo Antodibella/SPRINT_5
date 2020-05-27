@@ -11,8 +11,8 @@
     <div class="row justify-content-center">
         <div class="col-md-10">
             <div class="registro">
-                <h1>Registrarme</h1>
-                <p>complete todos los datos</p>
+                <h1>Registrarse</h1>
+                <p>Por favor completar todos los datos</p>
             </div>
 
             <div class="card">

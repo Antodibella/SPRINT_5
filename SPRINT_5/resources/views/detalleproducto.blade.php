@@ -52,8 +52,8 @@
         </ul>
         <hr>
         <ul><li><strong>PRECIO: <?=$producto['precio']?> ARS</strong></li></ul>
-        <button type="button" class="btn btn-outline-success"><a href="{{ route('agregar-al-carrito', $producto['id'])}}">Comprar ahora</button></a>
         <button type="button" class="btn btn-outline-primary"><a href="{{ route('agregar-al-carrito', $producto['id'])}}">Agregar al carrito</button>
+        <button type="button" class="btn btn-outline-success"><a href="/cart">Comprar ahora</button></a>
         <br><br>
     </div>
 </div>

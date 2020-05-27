@@ -772,3 +772,7 @@ div .filtrarportodo {
        margin-left: 5%;
        margin-right: 5%;
    }
+
+   .centerbtn {
+       text-align: center;
+   }
