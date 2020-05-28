@@ -147,7 +147,6 @@ class productosController extends Controller
             "file"=> "El campo :atribute no es una foto"
             ];
         $this->validate($req, $reglas, $mensajes);
-        dd($req);
         /// agregar foto y obtner el nombre
         $ruta=$req->file("foto")->store("public");
         $nombreArchivo=basename($ruta);
@@ -171,6 +170,9 @@ class productosController extends Controller
                 'precio' => request()->precio,
                 'stock' => request()->stock
         ]);
+        $producto-> save();
+        return redirect("/administrador");
+
     }
 
     public function borrar($id){
