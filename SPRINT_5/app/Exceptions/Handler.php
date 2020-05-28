@@ -52,4 +52,12 @@ class Handler extends ExceptionHandler
     {
         return parent::render($request, $exception);
     }
+
+    public function handle($request, Closure $next)
+{
+    if (auth()->check() && auth()->user()->is_admin)
+        return $next($request);
+
+    return redirect('/administrador');
+}
 }

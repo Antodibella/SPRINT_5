@@ -17,17 +17,17 @@
             </ol>
             <div class="carousel-inner">
             <div class="carousel-item active ">
-            <img src="/storage/{{$producto->foto}}" alt="logotipo" class="d-block w-100" alt="1">
+            <img src="/storage/{{$producto->foto}}" alt="logotipo" width="400px" alt="1">
             </div>
             
             @if ($producto->foto1):
             <div class="carousel-item">
-            <img src="/storage/{{$producto->foto1}}" alt="logotipo" class="d-block w-100" alt="2">
+            <img src="/storage/{{$producto->foto1}}" alt="logotipo" width="400px" alt="2">
             </div>   
             @endif
             @if ($producto->foto2):
             <div class="carousel-item">
-            <img src="/storage/{{$producto->foto2}}" alt="logotipo" class="d-block w-100" alt="3">
+            <img src="/storage/{{$producto->foto2}}" alt="logotipo" width="400px" alt="3">
             </div>
             @endif
             </div>

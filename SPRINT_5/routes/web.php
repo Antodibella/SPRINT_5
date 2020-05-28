@@ -72,17 +72,7 @@ Route::get('/producto/{id}', "productosController@detalle" )->name('productos.sh
 Route::post('/registracion', function () {
     return "Bienvenido";
 });
-Route::get('/administrador', function () {
-   return view("administrador");
-});
 
-Route::get('/administrador', "productosController@listaPro" );
-
-Route::post('/administrador', 'productosController@store')->name('productos.store');
-
-Route::delete('/borrarProducto/{id}','productosController@borrar')->name('productos.borrar');
-
-Route::put('/posteditar/{producto}','productosController@editar')->name('productos.editar');
 
 Auth::routes();
 
@@ -114,4 +104,20 @@ Route::get('Cart/Show',[
 
 Route::get('/agregarproducto', function () {
    return view ("agregarProductos");
+});
+
+//administrador
+Route::group(['middleware' => 'admin'], function () {
+   Route::get('/administrador', function () {
+      return view("administrador");
+   });
+   
+   Route::get('/administrador', "productosController@listaPro" );
+   
+   Route::post('/administrador', 'productosController@store')->name('productos.store');
+   
+   Route::delete('/borrarProducto/{id}','productosController@borrar')->name('productos.borrar');
+   
+   Route::put('/posteditar/{producto}','productosController@editar')->name('productos.editar');
+   
 });

@@ -45,6 +45,8 @@
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                    <a href="">Carrito</a>
+                                    <a href="">Administrador</a>
                                     <a class="dropdown-item" href="/miperfil"><p> Mi Perfil</p></a>
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
