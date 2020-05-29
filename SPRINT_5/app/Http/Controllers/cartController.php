@@ -13,7 +13,7 @@ class CartController extends Controller
     {
         $productosCart = auth()->user()->carrito;
         if($productosCart->isEmpty()){
-            return redirect()->route('index');
+            return redirect("/cartVacio");
         } else {
             return view('cart', compact('productosCart'));
         }

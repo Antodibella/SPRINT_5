@@ -101,7 +101,9 @@ Route::get('Cart/Show',[
    'as'=>'Cart-show',
    'uses'=>'CartController@show'
 ]);
-
+Route::get('/cartVacio', function () {
+   return view ("cartVacio");
+});
 Route::get('/agregarproducto', function () {
    return view ("agregarProductos");
 });
