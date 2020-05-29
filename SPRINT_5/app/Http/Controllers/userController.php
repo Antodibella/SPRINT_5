@@ -4,16 +4,17 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\user;
-class user extends Controller
+class users extends Controller
 {
-    public function editar(user $usuario){
+    public function editar(Request $req,user $usuario){
         //convertir foto si la edito y guardarla
-        $ruta = $usuario-> file("foto")-> store("public");
+        if($req->file("foto")){
+        $ruta=$req->file("foto")->store("public");
         $nombreArchivo = basename($ruta);
-            
-        $user->update([
-            'name'=> $usuario["name"],
-            'surname'=> $usuario["surname"],
+        }  
+        $users->update([
+            'name'=> $req["name"],
+            'surname'=> $req["surname"],
             'foto'=>$nombreArchivo ,
             
         ]);

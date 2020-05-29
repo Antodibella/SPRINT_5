@@ -50,10 +50,13 @@
   <div id="destacados"  class="col-md-12 col-lg-4">
         <div class="card" >
         <div class="card-body">
-        <h3 class="card-title"><a href="producto/<?=$producto['id']?>"></h4><h4><?=$producto['marca']?> <?=$producto['modelo']?></h4></a>
+        <h4 class="card-title"><a href="producto/<?=$producto['id']?>"></h4><h4><?=$producto['marca']?> <?=$producto['modelo']?></h4></a>
         <a href="producto/<?=$producto['id']?>"><img src="/storage/{{$producto->foto}}" alt="logotipo" class="img-fluid" width="300px"></a>
         <h5>ARS <?=$producto['precio']?></h5>
-        <a href="#" class="btn btn-dark">Comprar</a>
+        <div class="botonblanco">
+          <a href="producto/<?=$producto['id']?>" class="btn btn-dark">Comprar</a>
+        </div>
+        
 
   </div>
   </div>

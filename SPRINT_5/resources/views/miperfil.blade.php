@@ -28,11 +28,12 @@
            {{-- <img src="/storage/{{$Perfil->fotoP}}" alt=""> --}}
            </div>
             <label for=""><b> Foto de Perfil:</b></label>
-            <div class="text-center" width="200px">
-            {{-- <img class="fotoperfil" src="archivos/<?=/* $usuario['id'] */?>.jpg" alt=""> --}}
-            </div>
+            <br>
+              
+               <img src="/storage/{{ Auth::user()->foto }}" alt="" class="fotoperfil" width="200px"> 
+            
 
-            {{--Aca errores --}}
+            @include('error')
 
             <hr>
          
@@ -82,7 +83,7 @@
                     </div>
                     <div class="form-group col-md-7 m-auto">
                         <label for="inputEmail4"> Email</label>
-                        <input type="text" class="form-control" placeholder="Escriba su Apellido" name="surname" value="{{ Auth::user()->surname }}" required>
+                        <input type="text" class="form-control" placeholder="Escriba su Apellido" name="surname" value="{{ Auth::user()->email }}" required>
                 <br><br>  
                 <label for="psw"><b>Contraseña:</b></label>
                 <br>

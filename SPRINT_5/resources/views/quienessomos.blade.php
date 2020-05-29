@@ -69,7 +69,7 @@
 <div class="form-group col-md-12">
 <img class= "fotonosotros" src="img/nico.jpg" alt="1" width="30%">
 <img class= "fotonosotros"  src="img/licha.jpg" alt="2" width="30%">
- <img class= "fotonosotros" src="img/anto.jpg" alt="" width="30%"> 
+ <img class= "fotonosotros" src="img/anto.jpg" alt="3" width="30%"> 
 <br>
 <br>
 <br>

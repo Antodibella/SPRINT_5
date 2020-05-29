@@ -456,6 +456,14 @@ font-weight: bold;
     padding-left: 0px; 
 }
 
+#destacados a{
+    color: black;
+
+}
+ #destacados .botonblanco{
+    color: white!important;
+}
+
 /* MI PERFIL  */
 .miperfil {
     text-align: center;
