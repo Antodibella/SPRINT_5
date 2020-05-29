@@ -20,6 +20,8 @@
                 </div>
             @endif
             <?php $total=0;?>
+                           
+            
             <div class="card">
                 <div class="card-body">
                     <div class="row">

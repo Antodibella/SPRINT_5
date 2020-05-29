@@ -101,7 +101,7 @@
                 </div>
                 {{-- onclick="alert('¡Su consulta fue enviada con exito, en breve le responderemos!')" --}}
                <div class="text-center">
-              <button type="submit" class="btn btn-dark">  Guardar cambios  </button>
+              <button type="button" class="btn btn-dark">  Guardar cambios  </button>
                </div>
             </form> 
             </div>   
