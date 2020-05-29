@@ -123,7 +123,7 @@ class productosController extends Controller
         return redirect("/administrador"); 
     }
 
-    public function editar(Request $req){
+    public function editar(Request $req, Producto $producto){
         
         $reglas=[
             "marca"=> "required | string | min:2",
@@ -131,9 +131,6 @@ class productosController extends Controller
             "caracteristicas"=> "required | string |max:255",
             "precio"=> "required | numeric ",
             "stock"=> "required | integer ",
-            "foto" => "file",
-            "foto1"=> "nullable",
-            "foto2"=>"nullable"
             
     
             ];
@@ -147,9 +144,14 @@ class productosController extends Controller
             "file"=> "El campo :atribute no es una foto"
             ];
         $this->validate($req, $reglas, $mensajes);
+        $nombreArchivo="";
+        $nombreArchivo1="";
+        $nombreArchivo2="";
         /// agregar foto y obtner el nombre
+        if($req->file("foto")){
         $ruta=$req->file("foto")->store("public");
         $nombreArchivo=basename($ruta);
+    }
         //if para si esta vacio agregue null base de dato
         if($req->file("foto1")){
         $ruta1=$req->file("foto1")->store("public");
@@ -160,17 +162,17 @@ class productosController extends Controller
         $nombreArchivo2=basename($ruta2);
         } 
 
-            producto::update([
+            $producto->update([
                 'marca'=> request()->marca,
-                'foto'=>$nombreArchivo ,
-                'foto1'=>$nombreArchivo1 ,
-                'foto2'=>$nombreArchivo2 ,
+                'foto'=>($nombreArchivo)?$nombreArchivo:$producto->foto  ,
+                'foto1'=>($nombreArchivo1)?$nombreArchivo1:$producto->foto1 ,
+                'foto2'=>($nombreArchivo2)?$nombreArchivo2:$producto->foto2 ,
                 'modelo' => request()->modelo,
                 'caracteristicas'=> request()->caracteristicas,
                 'precio' => request()->precio,
-                'stock' => request()->stock
+                'stock'=> request()->stock
         ]);
-        $producto-> save();
+      
         return redirect("/administrador");
 
     }

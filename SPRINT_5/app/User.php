@@ -40,4 +40,8 @@ class User extends Authenticatable
     public function carrito(){
         return $this->hasMany(Cart::class);
     }
+
+    public function isAdmin(){
+        return $this->is_admin; 
+    }
 }
