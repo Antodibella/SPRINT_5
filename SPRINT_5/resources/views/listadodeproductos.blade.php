@@ -187,6 +187,14 @@
     <!--  SECCION  -->
     <section class="productos">
 
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="index">Inicio</a></li>
+    <li class="breadcrumb-item"><a href="#">Productos</a></li>
+    
+  </ol>
+</nav>
+
 <div id="rowproductos" class="col-lg-12 col-md-5">
 
 
@@ -194,17 +202,19 @@
         <div  id="rowproductos" class="row">
             <?php foreach($productos as $producto) : ?>
             
-          <div class="col-md-4 col-lg-4">
-                <div class="card" style="width: 25rem;">
-                <div class="card-body">
+          <div id="tproductos" class="col-md-4 col-lg-4">
+                <div class="card" >
+                <div  class="card-body">
                 <p class="card-title"><a href="producto/<?=$producto['id']?>"></p><p><?=$producto['marca']?> <?=$producto['modelo']?></p></a>
                   <div class="imgprod">
                 <a href="producto/<?=$producto['id']?>"><img src="/storage/{{$producto->foto}}" alt="logotipo" class="img-fluid" width="300px"></a>
                 </div>
                 <p>ARS <?=$producto['precio']?></p>
                 
-                <a href="producto/<?=$producto['id']?>"><button class="btn btn-dark">Comprar </button></a>
-               
+                <a href="producto/<?=$producto['id']?>">
+                <div class="row justify-content-center">
+                <button  id="botonpro" class="btn btn-dark">Comprar </button></a>
+               </div>
                 
     
           </div>
@@ -219,6 +229,25 @@
 </div>
 </div>
 <br>
+
+<nav aria-label="Page navigation example">
+  <ul class="pagination">
+    <li class="page-item">
+      <a class="page-link" href="#" aria-label="Previous">
+        <span aria-hidden="true">&laquo;</span>
+      </a>
+    </li>
+    <li class="page-item"><a class="page-link" href="#">1</a></li>
+    <li class="page-item"><a class="page-link" href="#">2</a></li>
+    <li class="page-item"><a class="page-link" href="#">3</a></li>
+    <li class="page-item">
+      <a class="page-link" href="#" aria-label="Next">
+        <span aria-hidden="true">&raquo;</span>
+      </a>
+    </li>
+  </ul>
+</nav>
+
     </section>
 
 

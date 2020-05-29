@@ -44,6 +44,10 @@
 </button>
 
 <!-- Modal -->
+
+
+<div class = "formularioayuda">
+
 <div class="modal fade" id="editar" tabindex="-1" role="dialog" aria-labelledby="editarLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -56,37 +60,59 @@
       <div class="modal-body">
         <form method="POST" action="{{ route('user.editar')}}" enctype="multipart/form-data">
           @csrf
-            <p>Por favor complete todos los campos</p>
-            
-            <label for="name"><b>Nombre:</b></label>
-            <br>
-            <input type="text" placeholder="Escriba su Nombre" name="name" value="{{ Auth::user()->name }}" required>
-                <br><br>
-                <label for="surname"><b>Apellido:</b></label>
-                <br>
-            <input type="text" placeholder="Escriba su Apellido" name="surname" value="{{ Auth::user()->surname }}" required>
+      
+        
+        <form action={{route('contact')}} method="POST">
+     {{ csrf_field() }}
+         <input type="hidden" name="submitted" id="submitted" value="1">
+                <div class="form-row">
+                    <div class="form-group col-md-7 m-auto">
+                        <label for="name"> Nombre</label>
+                         <br>
+                        <input type="text" class="form-control" placeholder="Nombre" name="name" id="name"   value="{{ Auth::user()->name }}" required>
+                         <br>
+                    </div>
+                    
+                    <div class="form-group col-md-7 m-auto">
+                        <label for="apellido"> Apellido</label>
+                         <br>
+                         <input type="text" class="form-control" placeholder="Apellido" name="surname" value="{{ Auth::user()->surname }}" required>
+              
+                         <br>
+                    </div>
+                    <div class="form-group col-md-7 m-auto">
+                        <label for="inputEmail4"> Email</label>
+                        <input type="text" class="form-control" placeholder="Escriba su Apellido" name="surname" value="{{ Auth::user()->surname }}" required>
                 <br><br>  
                 <label for="psw"><b>Contraseña:</b></label>
                 <br>
-            <input type="password" placeholder="Escriba su contraseña" name="password" required>
-            
-            <br><br>
-            <b> Cambiar foto</b><br><br>
+            <input type="password" class="form-control" placeholder="Escriba su contraseña" name="password" required>
+                        
+                        <br>
+                         <b> Cambiar foto</b><br><br>
             <input type="file" class="" name="foto" id="foto"  >
             <br><br>
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-            <button type="submit" class="btn btn-primary" name="guardar">Guardar Cambios</button>
-      
-            <br><br>
-        </form>
+                    </div>
+                    
+
+                  <br><br>
+                
+                </div>
+                {{-- onclick="alert('¡Su consulta fue enviada con exito, en breve le responderemos!')" --}}
+               <div class="text-center">
+              <button type="submit" class="btn btn-dark">  Guardar cambios  </button>
+               </div>
+            </form> 
+            </div>   
+
+
       </div>
     </div>
   </div>
 </div>
 
 <hr>
-                
-<section>
+
 
       {{--   <?php endif; ?>     --}}
         

@@ -552,7 +552,7 @@ font-weight: bold;
     height:300px;
     border-radius:150px;
     
-    margin-left: 80px;
+   
      filter: grayscale(100%);
    
  }
@@ -633,13 +633,36 @@ div .card{
    
 }
 
+#destacados{
+    text-align: center;
+}
+
+#destacadosind{
+    padding-left: 10%;
+    padding-right: 10%;
+    margin: 10px 10px;
+}
+
 /* listado de productos */
 
-#rowproductos{
-    text-align: center;
-  
+#rowproductos .row {
+    padding-left: 10%;
+    padding-right: 10%;
+    margin: 10px 10px;
     
 }
+
+#rowproductos.col-lg-12.col-md-5{
+    margin-top: 5px;
+}
+
+span.navbar-toggler-icon{
+    
+    background-color: white;
+    margin-left: 300px;
+}
+
+
 
 #descuentos{
     text-align: center;
@@ -649,9 +672,26 @@ div .card{
     text-align: center;
 }
 
+ol.breadcrumb{
+    background-color: white;
+    margin-top: 50px;
+    margin-left: 50px;
+    
+}
 
-.card{
-    margin: 30px;
+.Page .navigation .example{
+    padding: 30px 30px 30px 30px;
+}
+
+ul.pagination {
+    margin-left: 45%;
+   
+    margin-bottom: 3%;
+}
+
+
+.card {
+    margin: 15px;
 }
 
 .seccionproductos {
@@ -659,14 +699,13 @@ div .card{
     margin: 0px;
 }
 
-.rowproductos{
-    padding: 15px;
-    margin: 15px;
+
+#tproductos .col-md-4 .col-lg-4{
+    padding-left: 10%;
+    padding-right: 10%;
+    margin: 10px 10px;
 }
-.row {
-    padding: 15px 15px 15px 15px;
-    margin: 15px 15px 15px 15px;;
-}
+
 .containerproductos {
      padding-left: 0px;
      padding-top: 30px;
@@ -774,5 +813,13 @@ div .filtrarportodo {
    }
 
    .centerbtn {
+       text-align: center;
+   }
+
+   .somosnosotros {
+text-align: center;
+   }
+
+   h2.quienessomos{
        text-align: center;
    }

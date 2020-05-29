@@ -22,8 +22,15 @@
                     @endif
 
                     Bienvenido <strong>{{ Auth::user()->name }} </strong>  a TecnoMovil!
+                    
+
                 </div>
             </div>
+            <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
         </div>
     </div>
 </div>

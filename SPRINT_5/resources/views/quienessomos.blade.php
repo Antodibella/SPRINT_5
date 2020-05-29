@@ -6,10 +6,11 @@
  <br>
 <br>   
 <!--  Seccion -->
-<section>
+<section class="somosnosotros">
 <div class="form-row">
 <div class="form-group col-md-12">
 <h1 class="quienessomos" >Nuestro local</h1>
+<hr>
 <br>
 <br>
 
@@ -17,7 +18,7 @@
         <br>
         <br>
         <h1 class="quienessomos">Acerca de nosotros</h1>
-
+<hr>
 <div class="card-deck">
 <div class="card">
     
