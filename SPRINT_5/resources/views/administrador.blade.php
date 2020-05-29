@@ -153,9 +153,7 @@
 <hr>  
 </div>
 <br>
-<div class="center">
-  {{$productos->links()}}
-</div>
+
 <br>
 </section>
 

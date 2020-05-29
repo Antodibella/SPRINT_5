@@ -20,7 +20,7 @@ class productosController extends Controller
     public function listaPro(){
 
        
-        $productos = producto::paginate(10);
+        $productos = producto::All();
         // sirve para ver el arrays de productos --> dd($productos);
         $vac = compact("productos");
         return view('administrador', $vac);
