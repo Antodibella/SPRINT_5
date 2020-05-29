@@ -1,4 +1,7 @@
-@extends('layouts.app')
+@extends('layouts.plantilla')
+@section('header_title')
+    Reset password - TecnoMovil
+@endsection
 
 @section('content')
 <div class="container">

@@ -10,11 +10,13 @@
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
     <div class="navbar-nav ml-auto">
     <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
-     {{-- ($Auth->users()->isAdmin(1)) {}--}}
-        <!--<li class="nav-item active">
+     
+        @if (auth()->check()&& auth()->user()->isAdmin())
+        <li class="nav-item active">
             <a class="nav-link" href="/administrador">Administrador <span class="sr-only"></span></a>
         </li>
-    -->
+        
+        @endif
         
     
 
@@ -48,8 +50,7 @@
                                     
                                     <a class="dropdown-item" href="/miperfil"><p> Mi Perfil</p></a>
                                     
-                                    <a class="dropdown-item" href="/cart"><p> Carrito</p></a>
-                                    <a class="dropdown-item" href="/administrador"><p> Administrador</p></a>
+                                                                  
 
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
@@ -63,11 +64,11 @@
                             </li>
                         @endguest
                         
-
-                       <!-- <li>
+                        @if (auth()->check())
+                       <li>
                             <a class="fas fa-shopping-cart black"  href= "/cart" ></a>
-                            </li>
-                        -->
+                        </li>
+                        @endif
                             
     
     </form>

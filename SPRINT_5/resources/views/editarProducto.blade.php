@@ -10,6 +10,7 @@
   <h1>EDITAR PRODUCTOS</h1>
 <p>Por favor complete todo los campos</p>
 <br>
+@include('error')
     <form class="editarProducto" action="{{ route('productos.editar',$producto)}}" method="post" enctype="multipart/form-data">  
         @csrf
         @method('put') 
@@ -69,15 +70,7 @@
         </div>
         
         </form>
-        @if ($errors->any())
-    <div class="alert alert-danger">
-        <ul>
-            @foreach ($errors->all() as $error)
-                <li>{{ $error }}</li>
-            @endforeach
-        </ul>
-    </div>
-@endif
+        
 </section>
 
 

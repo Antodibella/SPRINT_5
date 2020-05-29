@@ -74,7 +74,7 @@ class productosController extends Controller
         $reglas=[
             "marca"=> "required | string | min:2",
             "modelo"=> "required | string | min:2",
-            "caracteristicas"=> "required | string |max:255",
+            "caracteristicas"=> "required | string",
             "precio"=> "required | numeric ",
             "stock"=> "required | integer ",
             "foto" => "file",
@@ -128,7 +128,7 @@ class productosController extends Controller
         $reglas=[
             "marca"=> "required | string | min:2",
             "modelo"=> "required | string | min:2",
-            "caracteristicas"=> "required | string |max:255",
+            "caracteristicas"=> "required | string",
             "precio"=> "required | numeric ",
             "stock"=> "required | integer ",
             
