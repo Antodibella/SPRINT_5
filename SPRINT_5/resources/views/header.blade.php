@@ -11,10 +11,10 @@
     <div class="navbar-nav ml-auto">
     <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
      {{-- ($Auth->users()->isAdmin(1)) {}--}}
-        <li class="nav-item active">
+        <!--<li class="nav-item active">
             <a class="nav-link" href="/administrador">Administrador <span class="sr-only"></span></a>
         </li>
-  
+    -->
         
     
 
@@ -45,15 +45,17 @@
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                    <a href="">Carrito</a>
-                                    <a href="">Administrador</a>
+                                    
                                     <a class="dropdown-item" href="/miperfil"><p> Mi Perfil</p></a>
+                                    
+                                    <a class="dropdown-item" href="/cart"><p> Carrito</p></a>
+                                    <a class="dropdown-item" href="/administrador"><p> Administrador</p></a>
+
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
                                       <p>  {{ __('Logout') }}</p>
                                     </a>
-
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                         @csrf
                                     </form>
@@ -62,11 +64,11 @@
                         @endguest
                         
 
-                        <li>
+                       <!-- <li>
                             <a class="fas fa-shopping-cart black"  href= "/cart" ></a>
                             </li>
+                        -->
                             
-    <li class="nav-item dropdown">
     
     </form>
     </div>

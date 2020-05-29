@@ -42,7 +42,7 @@
 <div  class="losmasbuscados">
 <h2 class="buscados"> Celulares destacados <a href="productos">  Ir a la tienda ></a></h2> 
 
-
+<div class="cotainer" style="width: 98%">
 <div  id="destacados" class="row">
 
     <?php foreach($productos ?? '' as $producto) : ?>
@@ -60,6 +60,8 @@
   </div>
     <?php endforeach; ?>
 </div>
+</div>
+
 </div>
 <br>
 </section>
